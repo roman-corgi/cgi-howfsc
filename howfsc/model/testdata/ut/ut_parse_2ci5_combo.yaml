@@ -1,0 +1,140 @@
+dms:
+  DM1:
+    pitch: 0.001
+    registration:
+      dx: 0
+      dy: 0
+      inffn: testdata/ut_influence_dm5v2_inffix.fits
+      nact: 48
+      ppact_cx: 8.3
+      ppact_cy: 8.3
+      ppact_d: 10
+      thact: 0
+      flipx: false
+    voltages:
+      gainfn: testdata/ut_DM1_gainmap.fits
+      vmax: 100
+      vmin: 0
+      vneighbor: 50.
+      vcorner: 75.
+      vquant: 0.001678466796875
+      tiefn: testdata/ut_DM1_tiemap.fits
+      flatfn: testdata/ut_DM1_flatmap.fits
+      crosstalkfn: testdata/ut_DM1_crosstalk.yaml
+    z: 0.0
+  DM2:
+    pitch: 0.001
+    registration:
+      dx: 0
+      dy: 0
+      inffn: testdata/ut_influence_dm5v2_inffix.fits
+      nact: 48
+      ppact_cx: 8.3
+      ppact_cy: 8.3
+      ppact_d: 10
+      thact: 0
+      flipx: false
+    voltages:
+      gainfn: testdata/ut_DM2_gainmap.fits
+      vmax: 100
+      vmin: 0
+      vneighbor: 50.
+      vcorner: 75.
+      vquant: 0.001678466796875
+      tiefn: testdata/ut_DM2_tiemap.fits
+      flatfn: testdata/ut_DM2_flatmap.fits
+      crosstalkfn: testdata/ut_DM2_crosstalk.yaml
+    z: 1.0
+init:
+  DM1:
+    dminit: testdata/widefov/ut_DM1_init.fits
+  DM2:
+    dminit: testdata/widefov/ut_DM2_init.fits
+sls:
+  0:
+    dh: testdata/widefov/ut_dh_ch0.fits
+    epup:
+      afn: testdata/widefov/ut_epup_amp_ch0.fits
+      pdp: 386
+      pfn: testdata/widefov/ut_epup_ph_ch0.fits
+      tip: 0
+      tilt: 0
+    fpm:
+      afn: testdata/widefov/ut_fpm_amp_ch0.fits
+      isopen: false
+      pfn: testdata/widefov/ut_fpm_ph_ch0.fits
+      ppl: 3.7093023255813953
+    fs:
+      afn: testdata/widefov/ut_fs_amp_ch0.fits
+      pfn: testdata/widefov/ut_fs_ph_ch0.fits
+      ppl: 3.7093023255813953
+    ft_dir: reverse
+    lam: 7.975e-07
+    lyot:
+      afn: testdata/widefov/ut_lyot_amp.fits
+      pdp: 386
+      rfn: testdata/widefov/ut_lyot_ph_ch0.fits
+      tip: 0
+      tilt: 0
+    sp:
+      afn: testdata/widefov/ut_sp_amp.fits
+      pdp: 386
+      pfn: testdata/widefov/ut_sp_ph_ch0.fits
+  1:
+    dh: testdata/widefov/ut_dh_ch1.fits
+    epup:
+      afn: testdata/widefov/ut_epup_amp_ch0.fits
+      pdp: 386
+      pfn: testdata/widefov/ut_epup_ph_ch1.fits
+      tip: 0
+      tilt: 0
+    fpm:
+      afn: testdata/widefov/ut_fpm_amp_ch1.fits
+      isopen: false
+      pfn: testdata/widefov/ut_fpm_ph_ch1.fits
+      ppl: 3.8372093023255816
+    fs:
+      afn: testdata/widefov/ut_fs_amp_ch1.fits
+      pfn: testdata/widefov/ut_fs_ph_ch1.fits
+      ppl: 3.8372093023255816
+    ft_dir: reverse
+    lam: 8.25e-07
+    lyot:
+      afn: testdata/widefov/ut_lyot_amp.fits
+      pdp: 386
+      pfn: testdata/widefov/ut_lyot_ph_ch1.fits
+      tip: 0
+      tilt: 0
+    sp:
+      afn: testdata/widefov/ut_sp_amp.fits
+      pdp: 386
+      pfn: testdata/widefov/ut_sp_ph_ch1.fits
+  2:
+    dh: testdata/widefov/ut_dh_ch2.fits
+    epup:
+      afn: testdata/widefov/ut_epup_amp_ch2.fits
+      pdp: 386
+      pfn: testdata/widefov/ut_epup_ph_ch2.fits
+      tip: 0
+      tilt: 0
+    fpm:
+      afn: testdata/widefov/ut_fpm_amp_ch2.fits
+      isopen: false
+      pfn: testdata/widefov/ut_fpm_ph_ch2.fits
+      ppl: 3.9651162790697674
+    fs:
+      afn: testdata/widefov/ut_fs_amp_ch2.fits
+      pfn: testdata/widefov/ut_fs_ph_ch2.fits
+      ppl: 3.9651162790697674
+    ft_dir: reverse
+    lam: 8.525e-07
+    lyot:
+      afn: testdata/widefov/ut_lyot_amp.fits
+      pdp: 386
+      pfn: testdata/widefov/ut_lyot_ph_ch2.fits
+      tip: 0
+      tilt: 0
+    sp:
+      afn: testdata/widefov/ut_sp_amp.fits
+      pdp: 386
+      pfn: testdata/widefov/ut_sp_ph_ch2.fits

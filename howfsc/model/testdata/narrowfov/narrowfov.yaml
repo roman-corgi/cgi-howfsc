@@ -1,0 +1,140 @@
+dms:
+  DM1:
+    pitch: 0.0009906
+    registration:
+      dx: 0
+      dy: 0
+      inffn: ut_influence_dm5v2_inffix.fits
+      nact: 48
+      ppact_cx: 6.510693
+      ppact_cy: 6.611131
+      ppact_d: 10
+      thact: 0.88
+      flipx: false
+    voltages:
+      gainfn: ut_DM1_gainmap.fits
+      vmax: 100
+      vmin: 0
+      vneighbor: 50.
+      vcorner: 75.
+      vquant: 0.001678466796875
+      tiefn: ut_DM1_tiemap.fits
+      flatfn: ut_DM1_flatmap.fits
+      crosstalkfn:
+    z: 0.0
+  DM2:
+    pitch: 0.0009906
+    registration:
+      dx: 0.5
+      dy: 0
+      inffn: ut_influence_dm5v2_inffix.fits
+      nact: 48
+      ppact_cx: 6.546792
+      ppact_cy: 6.611131
+      ppact_d: 10
+      thact: -0.45
+      flipx: false
+    voltages:
+      gainfn: ut_DM2_gainmap.fits
+      vmax: 100
+      vmin: 0
+      vneighbor: 50.
+      vcorner: 75.
+      vquant: 0.001678466796875
+      tiefn: ut_DM2_tiemap.fits
+      flatfn: ut_DM2_flatmap.fits
+      crosstalkfn: ut_DM2_crosstalk.yaml
+    z: 1.0
+init:
+  DM1:
+    dminit: ut_DM1_init.fits
+  DM2:
+    dminit: ut_DM2_init.fits
+sls:
+  0:
+    dh: ut_dh_ch0.fits
+    epup:
+      afn: ut_epup_amp_ch0.fits
+      pdp: 309
+      pfn: ut_epup_ph_ch0.fits
+      tip: 0
+      tilt: 0
+    fpm:
+      rfn: ut_fpm_real_ch0.fits
+      isopen: True
+      ifn: ut_fpm_imag_ch0.fits
+      ppl: 6.627831715210356
+    fs:
+      afn: ut_fs_amp_ch0.fits
+      pfn: ut_fs_ph_ch0.fits
+      ppl: 6.627831715210356
+    ft_dir: reverse
+    lam: 522.5e-9
+    lyot:
+      afn: ut_lyot_amp.fits
+      pdp: 309
+      pfn: ut_lyot_ph.fits
+      tip: 0
+      tilt: 0
+    sp:
+      afn: ut_sp_amp.fits
+      pdp: 309
+      pfn: ut_sp_ph.fits
+  1:
+    dh: ut_dh_ch1.fits
+    epup:
+      afn: ut_epup_amp_ch1.fits
+      pdp: 309
+      pfn: ut_epup_ph_ch1.fits
+      tip: 0
+      tilt: 0
+    fpm:
+      rfn: ut_fpm_real_ch1.fits
+      isopen: True
+      ifn: ut_fpm_imag_ch1.fits
+      ppl: 6.627831715210356
+    fs:
+      afn: ut_fs_amp_ch1.fits
+      pfn: ut_fs_ph_ch1.fits
+      ppl: 6.627831715210356
+    ft_dir: reverse
+    lam: 550.0e-9
+    lyot:
+      afn: ut_lyot_amp.fits
+      pdp: 309
+      pfn: ut_lyot_ph.fits
+      tip: 0
+      tilt: 0
+    sp:
+      afn: ut_sp_amp.fits
+      pdp: 309
+      pfn: ut_sp_ph.fits
+  2:
+    dh: ut_dh_ch2.fits
+    epup:
+      afn: ut_epup_amp_ch2.fits
+      pdp: 309
+      pfn: ut_epup_ph_ch2.fits
+      tip: 0
+      tilt: 0
+    fpm:
+      rfn: ut_fpm_real_ch2.fits
+      isopen: True
+      ifn: ut_fpm_imag_ch2.fits
+      ppl: 6.627831715210356
+    fs:
+      afn: ut_fs_amp_ch2.fits
+      pfn: ut_fs_ph_ch2.fits
+      ppl: 6.627831715210356
+    ft_dir: reverse
+    lam: 577.5e-9
+    lyot:
+      afn: ut_lyot_amp.fits
+      pdp: 309
+      pfn: ut_lyot_ph.fits
+      tip: 0
+      tilt: 0
+    sp:
+      afn: ut_sp_amp.fits
+      pdp: 309
+      pfn: ut_sp_ph.fits

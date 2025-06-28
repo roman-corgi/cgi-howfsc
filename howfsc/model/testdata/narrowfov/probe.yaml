@@ -1,0 +1,31 @@
+probes: 
+  0:
+    xcenter: 0
+    ycenter: -16
+    clock: 0
+    height: 20e-9
+    ximin: 0.5
+    ximax: 10
+    etamin: -10
+    etamax: 10
+    phase: 0
+  1:
+    xcenter: 0
+    ycenter: -16
+    clock: 0
+    height: 20e-9
+    ximin: 0.5
+    ximax: 10
+    etamin: -10
+    etamax: 10
+    phase: 90
+  2:
+    xcenter: 0
+    ycenter: -16
+    clock: 90
+    height: 20e-9
+    ximin: 0.5
+    ximax: 10
+    etamin: -10
+    etamax: 10
+    phase: 0

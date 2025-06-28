@@ -1,0 +1,198 @@
+dms:
+  DM1:
+    pitch: 0.001
+    registration:
+      dx: 0
+      dy: 0
+      inffn: ut_influence_dm5v2_inffix.fits
+      nact: 48
+      ppact_cx: 8.3
+      ppact_cy: 8.3
+      ppact_d: 10
+      thact: 0
+      flipx: false
+    voltages:
+      gainfn: ut_DM1_gainmap.fits
+      vmax: 100
+      vmin: 0
+      vneighbor: 50.
+      vcorner: 75.
+      vquant: 0.001678466796875
+      tiefn: ut_DM1_tiemap.fits
+      flatfn: ut_DM1_flatmap.fits
+      crosstalkfn:
+    z: 0.0
+  DM2:
+    pitch: 0.001
+    registration:
+      dx: 0
+      dy: 0
+      inffn: ut_influence_dm5v2_inffix.fits
+      nact: 48
+      ppact_cx: 8.3
+      ppact_cy: 8.3
+      ppact_d: 10
+      thact: 0
+      flipx: false
+    voltages:
+      gainfn: ut_DM2_gainmap.fits
+      vmax: 100
+      vmin: 0
+      vneighbor: 50.
+      vcorner: 75.
+      vquant: 0.001678466796875
+      tiefn: ut_DM2_tiemap.fits
+      flatfn: ut_DM2_flatmap.fits
+      crosstalkfn: ut_DM2_crosstalk.yaml
+    z: 1.0
+init:
+  DM1:
+    dminit: ut_DM1_init.fits
+  DM2:
+    dminit: ut_DM2_init.fits
+sls:
+  0:
+    dh: ut_dh_ch0.fits
+    epup:
+      afn: ut_epup_amp.fits
+      pdp: 387
+      pfn: ut_epup_ph.fits
+      tip: 0
+      tilt: 0
+    fpm:
+      afn: ut_fpm_amp_ch0.fits
+      isopen: false
+      pfn: ut_fpm_ph_ch0.fits
+      ppl: 2.1653333333333333
+    fs:
+      afn: ut_fs_amp.fits
+      pfn: ut_fs_ph.fits
+      ppl: 2.1653333333333333
+    ft_dir: reverse
+    lam: 7.1456e-07
+    lyot:
+      afn: ut_lyot_amp.fits
+      pdp: 387
+      pfn: ut_lyot_ph.fits
+      tip: 0
+      tilt: 0
+    sp:
+      afn: ut_sp_amp.fits
+      pdp: 387
+      pfn: ut_sp_ph_ch0.fits
+  1:
+    dh: ut_dh_ch1.fits
+    epup:
+      afn: ut_epup_amp.fits
+      pdp: 387
+      pfn: ut_epup_ph.fits
+      tip: 0
+      tilt: 0
+    fpm:
+      afn: ut_fpm_amp_ch1.fits
+      isopen: false
+      pfn: ut_fpm_ph_ch1.fits
+      ppl: 2.2493333333333334
+    fs:
+      afn: ut_fs_amp.fits
+      pfn: ut_fs_ph.fits
+      ppl: 2.2493333333333334
+    ft_dir: reverse
+    lam: 7.4228e-07
+    lyot:
+      afn: ut_lyot_amp.fits
+      pdp: 387
+      pfn: ut_lyot_ph.fits
+      tip: 0
+      tilt: 0
+    sp:
+      afn: ut_sp_amp.fits
+      pdp: 387
+      pfn: ut_sp_ph_ch1.fits
+  2:
+    dh: ut_dh_ch2.fits
+    epup:
+      afn: ut_epup_amp.fits
+      pdp: 387
+      pfn: ut_epup_ph.fits
+      tip: 0
+      tilt: 0
+    fpm:
+      afn: ut_fpm_amp_ch2.fits
+      isopen: false
+      pfn: ut_fpm_ph_ch2.fits
+      ppl: 2.3333333333333335
+    fs:
+      afn: ut_fs_amp.fits
+      pfn: ut_fs_ph.fits
+      ppl: 2.3333333333333335
+    ft_dir: reverse
+    lam: 7.7000e-07
+    lyot:
+      afn: ut_lyot_amp.fits
+      pdp: 387
+      pfn: ut_lyot_ph.fits
+      tip: 0
+      tilt: 0
+    sp:
+      afn: ut_sp_amp.fits
+      pdp: 387
+      pfn: ut_sp_ph_ch2.fits
+  3:
+    dh: ut_dh_ch3.fits
+    epup:
+      afn: ut_epup_amp.fits
+      pdp: 387
+      pfn: ut_epup_ph.fits
+      tip: 0
+      tilt: 0
+    fpm:
+      afn: ut_fpm_amp_ch3.fits
+      isopen: false
+      pfn: ut_fpm_ph_ch3.fits
+      ppl: 2.4173333333333336
+    fs:
+      afn: ut_fs_amp.fits
+      pfn: ut_fs_ph.fits
+      ppl: 2.4173333333333336
+    ft_dir: reverse
+    lam: 7.9772e-07
+    lyot:
+      afn: ut_lyot_amp.fits
+      pdp: 387
+      pfn: ut_lyot_ph.fits
+      tip: 0
+      tilt: 0
+    sp:
+      afn: ut_sp_amp.fits
+      pdp: 387
+      pfn: ut_sp_ph_ch3.fits
+  4:
+    dh: ut_dh_ch4.fits
+    epup:
+      afn: ut_epup_amp.fits
+      pdp: 387
+      pfn: ut_epup_ph.fits
+      tip: 0
+      tilt: 0
+    fpm:
+      afn: ut_fpm_amp_ch4.fits
+      isopen: false
+      pfn: ut_fpm_ph_ch4.fits
+      ppl: 2.5013333333333336
+    fs:
+      afn: ut_fs_amp.fits
+      pfn: ut_fs_ph.fits
+      ppl: 2.5013333333333336
+    ft_dir: reverse
+    lam: 8.2544e-07
+    lyot:
+      afn: ut_lyot_amp.fits
+      pdp: 387
+      pfn: ut_lyot_ph.fits
+      tip: 0
+      tilt: 0
+    sp:
+      afn: ut_sp_amp.fits
+      pdp: 387
+      pfn: ut_sp_ph_ch4.fits
