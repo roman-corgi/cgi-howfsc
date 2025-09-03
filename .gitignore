@@ -1,9 +1,17 @@
 *~
 *.pyc
+.ipynb_checkpoints/
+__pycache__/
 notfsw
 logs
 .coverage
 .coveragerc
+
+*.iml
+.idea/
+.vs
+.vscode
+.DS_Store
 
 log/
 bin/
