@@ -36,40 +36,13 @@ from howfsc.scripts.gitlframes import sim_gitlframe
 
 eetc_path = os.path.dirname(os.path.abspath(eetc.__file__))
 howfscpath = os.path.dirname(os.path.abspath(howfsc.__file__))
+defjacpath = os.path.join(os.path.dirname(howfscpath), 'jacdata')
 
-if __name__ == "__main__":
-    defjacpath = os.path.join(os.path.dirname(howfscpath), 'jacdata')
 
-    # setup for cmd line args
-    ap = argparse.ArgumentParser(prog='python nulltest_gitl.py', description="Run a nulling sequence, using the optical model as the data source.  Outputs will be displayed to the command line.")
-    ap.add_argument('-n', '--niter', default=5, help="Number of iterations to run.  Defaults to 5.", type=int)
-    ap.add_argument('--mode', default='widefov', choices=['widefov', 'narrowfov', 'spectroscopy', 'nfov_dm', 'nfov_flat'], help="coronagraph mode from test data; must be one of 'widefov', 'narrowfov', 'nfov_dm', 'nfov_flat', or 'spectroscopy'.  Defaults to 'widefov'.")
-    ap.add_argument('--profile', action='store_true', help='If present, runs the Python cProfile profiler on howfsc_computation and displays the top 20 howfsc/ contributors to cumulative time')
-    ap.add_argument('-p', '--fracbadpix', default=0, type=float, help="Fraction of pixels, in [0, 1], to make randomly bad (e.g. due to cosmic rays).  Defaults to 0, with no bad pixels.")
-    ap.add_argument('--nbadpacket', default=0, type=int, help="Number of GITL packets (3 rows x 153 cols) irrecoverably lost due to errors, to be replaced by NaNs.  Defaults to 0.  Same number is applied to every iteration, although not in the same place.")
-    ap.add_argument('--nbadframe', default=0, type=int, help="Number of entire GITL frames (153 x 153) irrecoverably lost due to errors, to be replaced by NaNs.  Defaults to 0.  Same number is applied to every iteration, although not in the same place.")
-    ap.add_argument('--logfile', default=None, help="If present, absolute path to file location to log to.")
-    ap.add_argument('--precomp', default='load_all', choices=['load_all', 'precomp_all_once', 'precomp_jacs_once', 'precomp_jacs_always'], help="Specifies Jacobian precomputation behavior.  'load_all' will load everything from files at the start and leave them fixed.  'precomp_all_once' will compute a Jacobian, JTWJs, and n2clist once at start.  'precomp_jacs_once' will compute a Jacobian and JTWJs once at start, and load n2clist from file.  'precomp_jacs_always' will compute a Jacobian and JTWJs at start and at every iteration; n2clist will be loaded from file.")
-
-    ap.add_argument(
-        '--num_process', default=None,
-        help="number of processes, defaults to None, indicating no multiprocessing. If 0, then howfsc_precomputation() defaults to the available number of cores", type=int
-    )
-    ap.add_argument(
-        '--num_threads', default=None,
-        help="set mkl_num_threads to use for parallel processes for calcjacs(). If None (default), then do nothing (number of threads might also be set externally through environment variable 'MKL_NUM_THREADS' or 'HOWFS_CALCJAC_NUM_THREADS'",
-        type=int
-    )
-
-    ap.add_argument('--fileout', default=None, help="If present, absolute path to file location of output .fits (including \'.fits\' at the end) file containing framelist and prev_exptime_list, as well as nlam stored as a header.")
-    ap.add_argument('--stellarvmag', default=None, type=float, help='If present, magnitude of the reference star desired will be updated in the hconf file (for parameter stellar_vmag in hconf file).')
-    ap.add_argument('--stellartype', default=None, help='If present, type of the reference star desired will be updated in the hconf file (for parameter stellar_type in hconf file).')
-    ap.add_argument('--stellarvmagtarget', default=None, type=float, help='If present, magnitude of the target star desired will be updated in the hconf file (for parameter stellar_vmag_target in hconf file).')
-    ap.add_argument('--stellartypetarget', default=None, help='If present, type of the target star desired will be updated in the hconf file (for parameter stellar_type_target in hconf file).')
-
-    ap.add_argument('-j', '--jacpath', default=defjacpath, help="absolute path to read Jacobian files from", type=str)
-    args = ap.parse_args()
-
+def nulling_test_gitl(niter, mode, isprof, logfile, fracbadpix, nbadpacket,
+                      nbadframe, fileout, stellar_vmag, stellar_type,
+                      stellar_vmag_target, stellar_type_target, jacpath,
+                      precomp, num_process, num_threads):
     otherlist = []
     abs_dm1list = []
     abs_dm2list = []
@@ -77,20 +50,6 @@ if __name__ == "__main__":
     scalelistout = []
     camlist = []
 
-    # User params
-    niter = args.niter
-    mode = args.mode
-    isprof = args.profile
-    logfile = args.logfile
-    fracbadpix = args.fracbadpix
-    nbadpacket = args.nbadpacket
-    nbadframe = args.nbadframe
-    fileout = args.fileout
-    stellar_vmag = args.stellarvmag
-    stellar_type = args.stellartype
-    stellar_vmag_target = args.stellarvmagtarget
-    stellar_type_target = args.stellartypetarget
-    jacpath = args.jacpath
     if nbadpacket < 0:
         raise ValueError('Number of bad packets cannot be less than 0.')
     if nbadframe < 0:
@@ -259,7 +218,7 @@ if __name__ == "__main__":
     prev_exptime_list = [exptime]*(nlam*ndm)
 
     # jac, jtwj_map, n2clist
-    if args.precomp in ['precomp_all_once']:
+    if precomp in ['precomp_all_once']:
         t0 = time.time()
         jac, jtwj_map, n2clist = howfsc_precomputation(
             cfg=cfg,
@@ -268,13 +227,13 @@ if __name__ == "__main__":
             subcroplist=subcroplist,
             jacmethod='fast',
             do_n2clist=True,
-            num_process=args.num_process,
-            num_threads=args.num_threads,
+            num_process=num_process,
+            num_threads=num_threads,
         )
         t1 = time.time()
         print('Jac/JTWJ/n2clist computation time: ' + str(t1-t0) + ' seconds')
         pass
-    elif args.precomp in ['precomp_jacs_once', 'precomp_jacs_always']:
+    elif precomp in ['precomp_jacs_once', 'precomp_jacs_always']:
         t0 = time.time()
         jac, jtwj_map, _ = howfsc_precomputation(
             cfg=cfg,
@@ -283,8 +242,8 @@ if __name__ == "__main__":
             subcroplist=subcroplist,
             jacmethod='fast',
             do_n2clist=False,
-            num_process=args.num_process,
-            num_threads=args.num_threads,
+            num_process=num_process,
+            num_threads=num_threads,
         )
         t1 = time.time()
         print('Initial jac calc time: ' + str(t1-t0) + ' seconds')
@@ -340,7 +299,7 @@ if __name__ == "__main__":
                               exptime,
                               crop,
                               indj)
-            bpmeas = rng.random(f.shape) > (1 - args.fracbadpix)
+            bpmeas = rng.random(f.shape) > (1 - fracbadpix)
             f[bpmeas] = np.nan
             framelist.append(f)
             pass
@@ -418,7 +377,7 @@ if __name__ == "__main__":
             pass
 
         # Skip the very last Jacobian that never gets used
-        if args.precomp in ['precomp_jacs_always'] and iteration < niter:
+        if precomp in ['precomp_jacs_always'] and iteration < niter:
             t0 = time.time()
             jac, jtwj_map, _ = howfsc_precomputation(
                 cfg=cfg,
@@ -427,8 +386,8 @@ if __name__ == "__main__":
                 subcroplist=subcroplist,
                 jacmethod='fast',
                 do_n2clist=False,
-                num_process=args.num_process,
-                num_threads=args.num_threads,
+                num_process=num_process,
+                num_threads=num_threads,
             )
             t1 = time.time()
             print('Jac recalc time: ' + str(t1-t0) + ' seconds')
@@ -501,3 +460,59 @@ if __name__ == "__main__":
         prev = pyfits.ImageHDU(prev_exptime_list)
         hdul = pyfits.HDUList([prim, img, prev])
         hdul.writeto(fileout, overwrite=True)
+
+
+if __name__ == "__main__":
+    # setup for cmd line args
+    ap = argparse.ArgumentParser(prog='python nulltest_gitl.py', description="Run a nulling sequence, using the optical model as the data source.  Outputs will be displayed to the command line.")
+    ap.add_argument('-n', '--niter', default=5, help="Number of iterations to run.  Defaults to 5.", type=int)
+    ap.add_argument('--mode', default='widefov', choices=['widefov', 'narrowfov', 'spectroscopy', 'nfov_dm', 'nfov_flat'], help="coronagraph mode from test data; must be one of 'widefov', 'narrowfov', 'nfov_dm', 'nfov_flat', or 'spectroscopy'.  Defaults to 'widefov'.")
+    ap.add_argument('--profile', action='store_true', help='If present, runs the Python cProfile profiler on howfsc_computation and displays the top 20 howfsc/ contributors to cumulative time')
+    ap.add_argument('-p', '--fracbadpix', default=0, type=float, help="Fraction of pixels, in [0, 1], to make randomly bad (e.g. due to cosmic rays).  Defaults to 0, with no bad pixels.")
+    ap.add_argument('--nbadpacket', default=0, type=int, help="Number of GITL packets (3 rows x 153 cols) irrecoverably lost due to errors, to be replaced by NaNs.  Defaults to 0.  Same number is applied to every iteration, although not in the same place.")
+    ap.add_argument('--nbadframe', default=0, type=int, help="Number of entire GITL frames (153 x 153) irrecoverably lost due to errors, to be replaced by NaNs.  Defaults to 0.  Same number is applied to every iteration, although not in the same place.")
+    ap.add_argument('--logfile', default=None, help="If present, absolute path to file location to log to.")
+    ap.add_argument('--precomp', default='load_all', choices=['load_all', 'precomp_all_once', 'precomp_jacs_once', 'precomp_jacs_always'], help="Specifies Jacobian precomputation behavior.  'load_all' will load everything from files at the start and leave them fixed.  'precomp_all_once' will compute a Jacobian, JTWJs, and n2clist once at start.  'precomp_jacs_once' will compute a Jacobian and JTWJs once at start, and load n2clist from file.  'precomp_jacs_always' will compute a Jacobian and JTWJs at start and at every iteration; n2clist will be loaded from file.")
+
+    ap.add_argument(
+        '--num_process', default=None,
+        help="number of processes, defaults to None, indicating no multiprocessing. If 0, then howfsc_precomputation() defaults to the available number of cores", type=int
+    )
+    ap.add_argument(
+        '--num_threads', default=None,
+        help="set mkl_num_threads to use for parallel processes for calcjacs(). If None (default), then do nothing (number of threads might also be set externally through environment variable 'MKL_NUM_THREADS' or 'HOWFS_CALCJAC_NUM_THREADS'",
+        type=int
+    )
+
+    ap.add_argument('--fileout', default=None, help="If present, absolute path to file location of output .fits (including \'.fits\' at the end) file containing framelist and prev_exptime_list, as well as nlam stored as a header.")
+    ap.add_argument('--stellarvmag', default=None, type=float, help='If present, magnitude of the reference star desired will be updated in the hconf file (for parameter stellar_vmag in hconf file).')
+    ap.add_argument('--stellartype', default=None, help='If present, type of the reference star desired will be updated in the hconf file (for parameter stellar_type in hconf file).')
+    ap.add_argument('--stellarvmagtarget', default=None, type=float, help='If present, magnitude of the target star desired will be updated in the hconf file (for parameter stellar_vmag_target in hconf file).')
+    ap.add_argument('--stellartypetarget', default=None, help='If present, type of the target star desired will be updated in the hconf file (for parameter stellar_type_target in hconf file).')
+
+    ap.add_argument('-j', '--jacpath', default=defjacpath, help="absolute path to read Jacobian files from", type=str)
+    args = ap.parse_args()
+
+    # User params
+    niter = args.niter
+    mode = args.mode
+    isprof = args.profile
+    logfile = args.logfile
+    fracbadpix = args.fracbadpix
+    nbadpacket = args.nbadpacket
+    nbadframe = args.nbadframe
+    fileout = args.fileout
+    stellar_vmag = args.stellarvmag
+    stellar_type = args.stellartype
+    stellar_vmag_target = args.stellarvmagtarget
+    stellar_type_target = args.stellartypetarget
+    jacpath = args.jacpath
+
+    precomp = args.precomp
+    num_process = args.num_process
+    num_threads = args.num_threads
+
+    nulling_test_gitl(niter, mode, isprof, logfile, fracbadpix, nbadpacket,
+                      nbadframe, fileout, stellar_vmag, stellar_type,
+                      stellar_vmag_target, stellar_type_target, jacpath,
+                      precomp, num_process, num_threads)
