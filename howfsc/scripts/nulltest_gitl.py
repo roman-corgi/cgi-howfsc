@@ -39,10 +39,10 @@ howfscpath = os.path.dirname(os.path.abspath(howfsc.__file__))
 defjacpath = os.path.join(os.path.dirname(howfscpath), 'jacdata')
 
 
-def nulling_test_gitl(niter, mode, isprof, logfile, fracbadpix, nbadpacket,
-                      nbadframe, fileout, stellar_vmag, stellar_type,
-                      stellar_vmag_target, stellar_type_target, jacpath,
-                      precomp, num_process, num_threads):
+def nulling_test_gitl(niter=5, mode='widefov', isprof=None, logfile=None, fracbadpix=0, nbadpacket=0,
+                      nbadframe=0, fileout=None, stellar_vmag=None, stellar_type=None,
+                      stellar_vmag_target=None, stellar_type_target=None, jacpath=defjacpath,
+                      precomp='load_all', num_process=None, num_threads=None):
     otherlist = []
     abs_dm1list = []
     abs_dm2list = []
