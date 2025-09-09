@@ -27,6 +27,28 @@ JACMETHOD = 'fast'
 
 
 def calculate_jacobian_multiprocessed(mode='narrowfov', nact=None, output=None, proc=None, num_threads=None):
+    """
+    Compute a full or partial Jacobian using multiple processors.
+
+    Stores the output in a FITS file, if a name is provided, and prints the time spent to do the calculation.
+    The filename must not be used already, as this script will not overwrite an existing file. The output file
+    will be a 2 x (num actuators) x (num pixels) 3D array. The first axis with 2 dimensions will be the real
+    and imaginary parts of the Jacobian, as FITS files cannot store complex data directly.
+
+    Parameters:
+    -----------
+    mode : str, optional
+        Coronagraph mode from test data; must be one of 'widefov', 'narrowfov' (default), 'nfov_dm', 'nfov_flat', or 'spectroscopy'.
+    nact : int, optional
+        Number of actuators in Jacobian to compute. If unspecified, will compute all actuators in configuration.
+    output : str, optional
+        Output file for Jacobian, including .fits extension.
+    proc : int, optional
+        Number of processes, defaults to 1. If set to 0, uses half the available CPU cores.
+    num_threads : int, optional
+        Sets os.environ['MKL_NUM_THREADS']=num_threads. Default uses os.environ['MKL_NUM_THREADS'] if already set,
+        or os.environ['HOWFS_CALCJAC_NUM_THREADS'], or if none are defined, standard OS threading.
+    """
     if output is not None and os.path.isfile(output):
         raise Exception("Output file exists")
 
