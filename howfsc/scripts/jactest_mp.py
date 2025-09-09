@@ -25,75 +25,37 @@ import howfsc.util.check as check
 
 JACMETHOD = 'fast'
 
-if __name__ == "__main__":
 
-    # setup for cmd line args
-    ap = argparse.ArgumentParser(prog='python jactest_mp.py', description="Compute a full or partial Jacobian using multiple processors.  Stores the output in a FITS file, if a name is provided, and prints the time spent to do the calculation.  The filename must not be used already, as this script will not overwrite an existing file.  The output file will be a 2 x (num actuators) x (num pixels) 3D array. The first axis with 2 dimensions will be the real and imaginary parts of the Jacobian, as FITS files cannot store complex data directly.")
-
-    ap.add_argument('-n', '--nact', help="number of actuators in Jacobian to compute.  If unspecified, will compute all actuators in configuration", type=int)
-
-    ap.add_argument('-o', '--output', help="output file for Jacobian; will be in FITS format", type=str)
-
-    ap.add_argument('--mode', default='widefov', choices=['widefov', 'narrowfov', 'spectroscopy', 'nfov_dm', 'nfov_flat'], help="coronagraph mode from test data; must be one of 'widefov' (default), 'narrowfov', 'nfov_dm', 'nfov_flat', or 'spectroscopy'")
-
-    ap.add_argument('-p', '--proc', default=None,
-                    help="number of processes, defaults to 1", type=int)
-
-    ap.add_argument('--num_threads', default=None,
-                    help="set os.environ['MKL_NUM_THREADS']=num_threads, default uses os.environ['MKL_NUM_THREADS'] if already set, or os.environ['HOWFS_CALCJAC_NUM_THREADS'] or if none are defined standard os threading", type=int)
-
-    # num_process: number of parallel processes to use when calculating the
-    #  Jacobian. If value is 0 then then
-    #  num_process = multiprocessing.cpu_count()//2, which is the number
-    #  of cores on computers with Intel CPUs.
-    #  If not defined (default=None), then num_process is:
-    #  os.environ['HOWFS_CALCJAC_NUM_PROCESS'], if defined,
-    #  else no multiprocessing
-    # num_threads: the mkl library automatically uses multi-threading
-    #  which causes bottle necks and results in slower performance when using
-    #  parallel processes. With Intel CPUs with multiple cores, best
-    #  performance is usually with parallel processing and num_threads = 1.
-    #  If not defined (default=None), order of precedence is:
-    #  os.environ['HOWFS_CALCJAC_NUM_THREADS'], if defined, else
-    #  os.environ['MKL_NUM_THREADS'], if defined, else
-    #  1, if num_process is defined and > 1, else
-    #  num_threads is not set and the default OS threading is used. For most
-    #  linux/Intel machines, the OS will use max number of threads.
-    #  Note: if os.environ['MKL_NUM_THREADS'] is defined, this value sets
-    #  number of threads for all computations, not just calcjacs(). The
-    #  computation time of single process functions might be longer.
-
-    args = ap.parse_args()
-
-    if args.output is not None and os.path.isfile(args.output):
+def calculate_jacobian_multiprocessed(mode='narrowfov', nact=None, output=None, proc=None, num_threads=None):
+    if output is not None and os.path.isfile(output):
         raise Exception("Output file exists")
 
     # Load cfg
-    if args.mode == 'widefov':
+    if mode == 'widefov':
         print('mode = widefov')
         cfgpath = os.path.join(os.path.dirname(
                        os.path.abspath(howfsc.__file__)),
                        'model', 'testdata', 'widefov', 'widefov.yaml')
         pass
-    elif args.mode == 'narrowfov':
+    elif mode == 'narrowfov':
         print('mode = narrowfov')
         cfgpath = os.path.join(os.path.dirname(
                        os.path.abspath(howfsc.__file__)),
                        'model', 'testdata', 'narrowfov', 'narrowfov.yaml')
         pass
-    elif args.mode == 'spectroscopy':
+    elif mode == 'spectroscopy':
         print('mode = spectroscopy')
         cfgpath = os.path.join(os.path.dirname(
                      os.path.abspath(howfsc.__file__)),
                      'model', 'testdata', 'spectroscopy', 'spectroscopy.yaml')
         pass
-    elif args.mode == 'nfov_dm':
+    elif mode == 'nfov_dm':
         print('mode = nfov_dm')
         cfgpath = os.path.join(os.path.dirname(
                      os.path.abspath(howfsc.__file__)),
                      'model', 'testdata', 'narrowfov', 'narrowfov_dm.yaml')
         pass
-    elif args.mode == 'nfov_flat':
+    elif mode == 'nfov_flat':
         print('mode = nfov_flat')
         cfgpath = os.path.join(os.path.dirname(
                      os.path.abspath(howfsc.__file__)),
@@ -108,7 +70,7 @@ if __name__ == "__main__":
     cfg = CoronagraphMode(cfgpath)
 
     # set num_process, see doc string above for order of precedence
-    num_process = args.proc
+    num_process = proc
     if num_process is None:
         # default input argument is None
         num_process = int(os.environ.get('HOWFS_CALCJAC_NUM_PROCESS', 1))
@@ -120,7 +82,7 @@ if __name__ == "__main__":
         num_process = multiprocessing.cpu_count()//2
 
     # set num_threads, see doc string above for order of precedence
-    num_threads = args.num_threads
+    num_threads = num_threads
     if num_threads is None:
         # default input argument is None
         # os.environ.get('key') returns None if 'key' doesn't exist
@@ -151,8 +113,8 @@ if __name__ == "__main__":
     dm0list = None
 
     # use nact for actual number of actuators to run through
-    if args.nact is not None:
-        nact = int(args.nact)
+    if nact is not None:
+        nact = int(nact)
         ijlist = range(nact)
         pass
     else:
@@ -213,7 +175,56 @@ if __name__ == "__main__":
     logging.info('Jacobian calculation complete: elapsed time = %f secs',
                  t1-t0)
 
-    if args.output is not None:
-        logging.info('Writing jac to: ' + args.output)
-        pyfits.writeto(args.output, jac)
+    if output is not None:
+        logging.info('Writing jac to: ' + output)
+        pyfits.writeto(output, jac)
         pass
+
+
+if __name__ == "__main__":
+
+    # setup for cmd line args
+    ap = argparse.ArgumentParser(prog='python jactest_mp.py', description="Compute a full or partial Jacobian using multiple processors.  Stores the output in a FITS file, if a name is provided, and prints the time spent to do the calculation.  The filename must not be used already, as this script will not overwrite an existing file.  The output file will be a 2 x (num actuators) x (num pixels) 3D array. The first axis with 2 dimensions will be the real and imaginary parts of the Jacobian, as FITS files cannot store complex data directly.")
+
+    ap.add_argument('-n', '--nact', help="number of actuators in Jacobian to compute.  If unspecified, will compute all actuators in configuration", type=int)
+
+    ap.add_argument('-o', '--output', help="output file for Jacobian; will be in FITS format", type=str)
+
+    ap.add_argument('--mode', default='widefov', choices=['widefov', 'narrowfov', 'spectroscopy', 'nfov_dm', 'nfov_flat'], help="coronagraph mode from test data; must be one of 'widefov' (default), 'narrowfov', 'nfov_dm', 'nfov_flat', or 'spectroscopy'")
+
+    ap.add_argument('-p', '--proc', default=None,
+                    help="number of processes, defaults to 1", type=int)
+
+    ap.add_argument('--num_threads', default=None,
+                    help="set os.environ['MKL_NUM_THREADS']=num_threads, default uses os.environ['MKL_NUM_THREADS'] if already set, or os.environ['HOWFS_CALCJAC_NUM_THREADS'] or if none are defined standard os threading", type=int)
+
+    # num_process: number of parallel processes to use when calculating the
+    #  Jacobian. If value is 0 then then
+    #  num_process = multiprocessing.cpu_count()//2, which is the number
+    #  of cores on computers with Intel CPUs.
+    #  If not defined (default=None), then num_process is:
+    #  os.environ['HOWFS_CALCJAC_NUM_PROCESS'], if defined,
+    #  else no multiprocessing
+    # num_threads: the mkl library automatically uses multi-threading
+    #  which causes bottle necks and results in slower performance when using
+    #  parallel processes. With Intel CPUs with multiple cores, best
+    #  performance is usually with parallel processing and num_threads = 1.
+    #  If not defined (default=None), order of precedence is:
+    #  os.environ['HOWFS_CALCJAC_NUM_THREADS'], if defined, else
+    #  os.environ['MKL_NUM_THREADS'], if defined, else
+    #  1, if num_process is defined and > 1, else
+    #  num_threads is not set and the default OS threading is used. For most
+    #  linux/Intel machines, the OS will use max number of threads.
+    #  Note: if os.environ['MKL_NUM_THREADS'] is defined, this value sets
+    #  number of threads for all computations, not just calcjacs(). The
+    #  computation time of single process functions might be longer.
+
+    args = ap.parse_args()
+
+    output = args.output
+    mode = args.mode
+    proc = args.proc
+    num_threads = args.num_threads
+    nact = args.nact
+
+    calculate_jacobian_multiprocessed(output, mode, proc, num_threads, nact)
