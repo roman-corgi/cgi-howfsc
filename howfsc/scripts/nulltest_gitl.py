@@ -565,17 +565,17 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
         # Estimated E-fields at each wavelength
         efields = []
         for oitem in otherlist:
-            for n in nlam:
-                efields.append(oitem[n]['meas_efield'])
-                # Save efields as cube to fits file
-        hdr = pyfits.Header()
-        hdr['NLAM'] = len(cfg.sl_list)
-        prim = pyfits.PrimaryHDU(header=hdr)
-        img = pyfits.ImageHDU(efields)
-        hdul = pyfits.HDUList([prim, img])
-        fn, fe = os.path.splitext(fileout)
-        fnout = f"{fn}_estimated_efields_iter_{i+1:04d}{fe}"
-        hdul.writeto(fnout, overwrite=True)
+            for n in range(nlam):
+                efields.append(np.real(oitem[n]['meas_efield']))
+                efields.append(np.imag(oitem[n]['meas_efield']))
+            hdr = pyfits.Header()
+            hdr['NLAM'] = len(cfg.sl_list)
+            prim = pyfits.PrimaryHDU(header=hdr)
+            img = pyfits.ImageHDU(efields)
+            hdul = pyfits.HDUList([prim, img])
+            fn, fe = os.path.splitext(fileout)
+            fnout = f"{fn}_estimated_efields_iter_{i+1:04d}{fe}"
+            hdul.writeto(fnout, overwrite=True)
 
 
 if __name__ == "__main__":
