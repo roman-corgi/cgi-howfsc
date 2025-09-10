@@ -548,6 +548,9 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
         plt.savefig(os.path.join(outpath, "contrast_vs_iteration.pdf"))
         plt.close()
 
+        # Save measured_c to a csv file
+        np.savetxt(os.path.join(outpath, "measured_contrast.csv"), np.array(measured_c), delimiter=",", header="Measured Contrast", comments="")
+
         # Create one subdirectory per iteration
         for i in range(len(framelistlist)):
             iterpath = os.path.join(outpath, f"iteration_{i+1:04d}")
