@@ -31,6 +31,7 @@ def save_outputs(fileout, cfg, camlist, framelistlist, otherlist, measured_c):
     plt.plot(np.arange(len(measured_c)) + 1, measured_c, marker='o')
     plt.xlabel('Iteration')
     plt.ylabel('Measured Contrast')
+    plt.semilogy()
     plt.savefig(os.path.join(outpath, "contrast_vs_iteration.pdf"))
     plt.close()
 
