@@ -28,7 +28,7 @@ from howfsc.model.mode import CoronagraphMode
 
 from howfsc.util.loadyaml import loadyaml
 from howfsc.util.gitl_tools import param_order_to_list
-from howfsc.util.corgihowfsc import save_outputs
+from howfsc.util.corgitools import save_outputs
 
 from howfsc.gitl import howfsc_computation
 from howfsc.precomp import howfsc_precomputation
