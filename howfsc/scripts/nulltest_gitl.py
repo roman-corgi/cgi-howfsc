@@ -34,9 +34,13 @@ from howfsc.precomp import howfsc_precomputation
 
 from howfsc.scripts.gitlframes import sim_gitlframe
 
+# New imports
+import matplotlib.pylab as plt
+
 eetc_path = os.path.dirname(os.path.abspath(eetc.__file__))
 howfscpath = os.path.dirname(os.path.abspath(howfsc.__file__))
 defjacpath = os.path.join(os.path.dirname(howfscpath), 'jacdata')
+
 
 def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fracbadpix=0, nbadpacket=0,
                       nbadframe=0, fileout=None, stellar_vmag=None, stellar_type=None,
@@ -115,6 +119,9 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
     framelistlist = []
     scalelistout = []
     camlist = []
+
+    # New lists compared to original
+    measured_c = []
 
     if nbadpacket < 0:
         raise ValueError('Number of bad packets cannot be less than 0.')
@@ -416,6 +423,9 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
         scalelistout.append(scale_factor_list)
         camlist.append([gain_list, exptime_list, nframes_list])
 
+        # New lists compared to original version
+        measured_c.append(prev_c)
+
         print('-----------------------------------')
         print('Iteration: ' + str(iteration))
         print('HOWFSC computation time: ' + str(t1-t0))
@@ -527,20 +537,41 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
         hdul = pyfits.HDUList([prim, img, prev])
         hdul.writeto(fileout, overwrite=True)
 
-        # minimal change to save all frames from each iteration
-        for i in range(len(framelistlist)):
+        ### Minimal change to save data from each iteration
+
+        # Plot measured_c vs iteration
+        plt.plot(np.arange(len(measured_c)) + 1, measured_c, marker='o')
+        plt.savefig(os.path.join(fileout, "contrast_vs_iteration.pdf"))
+
+        # Unprobed and probed images, in all wavelengths
+        for i, flist in enumerate(framelistlist):
             hdr = pyfits.Header()
             hdr['NLAM'] = len(cfg.sl_list)
-            hdr['ITER'] = i+1
+            hdr['ITER'] = i + 1
             prim = pyfits.PrimaryHDU(header=hdr)
-            img = pyfits.ImageHDU(framelistlist[i])
+            img = pyfits.ImageHDU(flist)
             prev = pyfits.ImageHDU(param_order_to_list(camlist[i][1]))
             hdul = pyfits.HDUList([prim, img, prev])
             fn, fe = os.path.splitext(fileout)
-            fnout = f"{fn}_iteration_{i+1:04d}{fe}"  # e.g. _iteration_0001.fits, can be changed to something else
+            fnout = f"images_iter_{i+1:04d}{fe}"
             hdul.writeto(fnout, overwrite=True)
-            pass
-        pass             
+
+        # Estimated E-fields at each wavelength
+        efields = []
+        for oitem in otherlist:
+            for n in nlam:
+                efields.append(oitem[n]['meas_efield'])
+                # Save efields as cube to fits file
+        hdr = pyfits.Header()
+        hdr['NLAM'] = len(cfg.sl_list)
+        prim = pyfits.PrimaryHDU(header=hdr)
+        img = pyfits.ImageHDU(efields)
+        hdul = pyfits.HDUList([prim, img])
+        fn, fe = os.path.splitext(fileout)
+        fnout = f"estimated_efields_iter_{i+1:04d}{fe}"
+        hdul.writeto(fnout, overwrite=True)
+
+
 if __name__ == "__main__":
     # setup for cmd line args
     ap = argparse.ArgumentParser(prog='python nulltest_gitl.py', description="Run a nulling sequence, using the optical model as the data source.  Outputs will be displayed to the command line.")
