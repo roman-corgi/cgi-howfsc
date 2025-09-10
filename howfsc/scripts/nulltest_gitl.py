@@ -28,14 +28,12 @@ from howfsc.model.mode import CoronagraphMode
 
 from howfsc.util.loadyaml import loadyaml
 from howfsc.util.gitl_tools import param_order_to_list
+from howfsc.util.corgihowfsc import save_outputs
 
 from howfsc.gitl import howfsc_computation
 from howfsc.precomp import howfsc_precomputation
 
 from howfsc.scripts.gitlframes import sim_gitlframe
-
-# New imports
-import matplotlib.pylab as plt
 
 eetc_path = os.path.dirname(os.path.abspath(eetc.__file__))
 howfscpath = os.path.dirname(os.path.abspath(howfsc.__file__))
@@ -538,54 +536,6 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
         hdul.writeto(fileout, overwrite=True)
 
         save_outputs(fileout, cfg, camlist, framelistlist, otherlist, measured_c)
-
-
-def save_outputs(fileout, cfg, camlist, framelistlist, otherlist, measured_c):
-    outpath = os.path.dirname(fileout)
-
-    # Plot measured_c vs iteration
-    plt.figure()
-    plt.plot(np.arange(len(measured_c)) + 1, measured_c, marker='o')
-    plt.xlabel('Iteration')
-    plt.ylabel('Measured Contrast')
-    plt.savefig(os.path.join(outpath, "contrast_vs_iteration.pdf"))
-    plt.close()
-
-    # Save measured_c to a csv file
-    np.savetxt(os.path.join(outpath, "measured_contrast.csv"), np.array(measured_c), delimiter=",", header="Measured Contrast", comments="")
-
-    # Create one subdirectory per iteration
-    for i in range(len(framelistlist)):
-        iterpath = os.path.join(outpath, f"iteration_{i+1:04d}")
-        if not os.path.exists(iterpath):
-            os.makedirs(iterpath)
-
-    # Unprobed and probed images, in all wavelengths
-    for i, flist in enumerate(framelistlist):
-        hdr = pyfits.Header()
-        hdr['NLAM'] = len(cfg.sl_list)
-        hdr['ITER'] = i + 1
-        prim = pyfits.PrimaryHDU(header=hdr)
-        img = pyfits.ImageHDU(flist)
-        prev = pyfits.ImageHDU(param_order_to_list(camlist[i][1]))
-        hdul = pyfits.HDUList([prim, img, prev])
-        fnout = os.path.join(outpath, f"iteration_{i+1:04d}", f"images.fits")
-        hdul.writeto(fnout, overwrite=True)
-
-    # Estimated E-fields at each wavelength
-    efields = []
-    for i, oitem in enumerate(otherlist):
-        for n in range(len(cfg.sl_list)):
-            efields.append(np.real(oitem[n]['meas_efield']))
-            efields.append(np.imag(oitem[n]['meas_efield']))
-        hdr = pyfits.Header()
-        hdr['NLAM'] = len(cfg.sl_list)
-        prim = pyfits.PrimaryHDU(header=hdr)
-        img = pyfits.ImageHDU(efields)
-        hdul = pyfits.HDUList([prim, img])
-        fn, fe = os.path.splitext(fileout)
-        fnout = os.path.join(outpath, f"iteration_{i+1:04d}", f"efield_estimations.fits")
-        hdul.writeto(fnout, overwrite=True)
 
 
 if __name__ == "__main__":
