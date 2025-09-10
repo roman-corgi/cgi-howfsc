@@ -38,7 +38,6 @@ eetc_path = os.path.dirname(os.path.abspath(eetc.__file__))
 howfscpath = os.path.dirname(os.path.abspath(howfsc.__file__))
 defjacpath = os.path.join(os.path.dirname(howfscpath), 'jacdata')
 
-
 def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fracbadpix=0, nbadpacket=0,
                       nbadframe=0, fileout=None, stellar_vmag=None, stellar_type=None,
                       stellar_vmag_target=None, stellar_type_target=None, jacpath=defjacpath,
@@ -528,7 +527,20 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
         hdul = pyfits.HDUList([prim, img, prev])
         hdul.writeto(fileout, overwrite=True)
 
-
+        # minimal change to save all frames from each iteration
+        for i in range(len(framelistlist)):
+            hdr = pyfits.Header()
+            hdr['NLAM'] = len(cfg.sl_list)
+            hdr['ITER'] = i+1
+            prim = pyfits.PrimaryHDU(header=hdr)
+            img = pyfits.ImageHDU(framelistlist[i])
+            prev = pyfits.ImageHDU(param_order_to_list(camlist[i][1]))
+            hdul = pyfits.HDUList([prim, img, prev])
+            fn, fe = os.path.splitext(fileout)
+            fnout = f"{fn}_iteration_{i+1:04d}{fe}"  # e.g. _iteration_0001.fits, can be changed to something else
+            hdul.writeto(fnout, overwrite=True)
+            pass
+        pass             
 if __name__ == "__main__":
     # setup for cmd line args
     ap = argparse.ArgumentParser(prog='python nulltest_gitl.py', description="Run a nulling sequence, using the optical model as the data source.  Outputs will be displayed to the command line.")
