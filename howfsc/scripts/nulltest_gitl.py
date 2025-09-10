@@ -540,9 +540,14 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
         ### Minimal change to save data from each iteration
 
         # Plot measured_c vs iteration
-        plt.plot(np.arange(len(measured_c)) + 1, measured_c, marker='o')
         fn, fe = os.path.splitext(fileout)
+
+        plt.figure()
+        plt.plot(np.arange(len(measured_c)) + 1, measured_c, marker='o')
+        plt.xlabel('Iteration')
+        plt.ylabel('Measured Contrast')
         plt.savefig(f"{fn}_contrast_vs_iteration.pdf")
+        plt.close()
 
         # Unprobed and probed images, in all wavelengths
         for i, flist in enumerate(framelistlist):
