@@ -541,7 +541,8 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
 
         # Plot measured_c vs iteration
         plt.plot(np.arange(len(measured_c)) + 1, measured_c, marker='o')
-        plt.savefig(os.path.join(fileout, "contrast_vs_iteration.pdf"))
+        fn, fe = os.path.splitext(fileout)
+        plt.savefig(f"{fn}_contrast_vs_iteration.pdf")
 
         # Unprobed and probed images, in all wavelengths
         for i, flist in enumerate(framelistlist):
@@ -553,7 +554,7 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
             prev = pyfits.ImageHDU(param_order_to_list(camlist[i][1]))
             hdul = pyfits.HDUList([prim, img, prev])
             fn, fe = os.path.splitext(fileout)
-            fnout = f"images_iter_{i+1:04d}{fe}"
+            fnout = f"{fn}_iter_{i+1:04d}{fe}"  # e.g. _iteration_0001.fits, can be changed to something else
             hdul.writeto(fnout, overwrite=True)
 
         # Estimated E-fields at each wavelength
@@ -568,7 +569,7 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
         img = pyfits.ImageHDU(efields)
         hdul = pyfits.HDUList([prim, img])
         fn, fe = os.path.splitext(fileout)
-        fnout = f"estimated_efields_iter_{i+1:04d}{fe}"
+        fnout = f"{fn}_estimated_efields_iter_{i+1:04d}{fe}"
         hdul.writeto(fnout, overwrite=True)
 
 
