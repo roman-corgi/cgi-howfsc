@@ -537,52 +537,55 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
         hdul = pyfits.HDUList([prim, img, prev])
         hdul.writeto(fileout, overwrite=True)
 
-        ### Minimal change to save data from each iteration
-        outpath = os.path.dirname(fileout)
+        save_outputs(fileout, cfg, camlist, framelistlist, otherlist, measured_c)
 
-        # Plot measured_c vs iteration
-        plt.figure()
-        plt.plot(np.arange(len(measured_c)) + 1, measured_c, marker='o')
-        plt.xlabel('Iteration')
-        plt.ylabel('Measured Contrast')
-        plt.savefig(os.path.join(outpath, "contrast_vs_iteration.pdf"))
-        plt.close()
 
-        # Save measured_c to a csv file
-        np.savetxt(os.path.join(outpath, "measured_contrast.csv"), np.array(measured_c), delimiter=",", header="Measured Contrast", comments="")
+def save_outputs(fileout, cfg, camlist, framelistlist, otherlist, measured_c):
+    outpath = os.path.dirname(fileout)
 
-        # Create one subdirectory per iteration
-        for i in range(len(framelistlist)):
-            iterpath = os.path.join(outpath, f"iteration_{i+1:04d}")
-            if not os.path.exists(iterpath):
-                os.makedirs(iterpath)
+    # Plot measured_c vs iteration
+    plt.figure()
+    plt.plot(np.arange(len(measured_c)) + 1, measured_c, marker='o')
+    plt.xlabel('Iteration')
+    plt.ylabel('Measured Contrast')
+    plt.savefig(os.path.join(outpath, "contrast_vs_iteration.pdf"))
+    plt.close()
 
-        # Unprobed and probed images, in all wavelengths
-        for i, flist in enumerate(framelistlist):
-            hdr = pyfits.Header()
-            hdr['NLAM'] = len(cfg.sl_list)
-            hdr['ITER'] = i + 1
-            prim = pyfits.PrimaryHDU(header=hdr)
-            img = pyfits.ImageHDU(flist)
-            prev = pyfits.ImageHDU(param_order_to_list(camlist[i][1]))
-            hdul = pyfits.HDUList([prim, img, prev])
-            fnout = os.path.join(outpath, f"iteration_{i+1:04d}", f"images.fits")
-            hdul.writeto(fnout, overwrite=True)
+    # Save measured_c to a csv file
+    np.savetxt(os.path.join(outpath, "measured_contrast.csv"), np.array(measured_c), delimiter=",", header="Measured Contrast", comments="")
 
-        # Estimated E-fields at each wavelength
-        efields = []
-        for i, oitem in enumerate(otherlist):
-            for n in range(nlam):
-                efields.append(np.real(oitem[n]['meas_efield']))
-                efields.append(np.imag(oitem[n]['meas_efield']))
-            hdr = pyfits.Header()
-            hdr['NLAM'] = len(cfg.sl_list)
-            prim = pyfits.PrimaryHDU(header=hdr)
-            img = pyfits.ImageHDU(efields)
-            hdul = pyfits.HDUList([prim, img])
-            fn, fe = os.path.splitext(fileout)
-            fnout = os.path.join(outpath, f"iteration_{i+1:04d}", f"efield_estimations.fits")
-            hdul.writeto(fnout, overwrite=True)
+    # Create one subdirectory per iteration
+    for i in range(len(framelistlist)):
+        iterpath = os.path.join(outpath, f"iteration_{i+1:04d}")
+        if not os.path.exists(iterpath):
+            os.makedirs(iterpath)
+
+    # Unprobed and probed images, in all wavelengths
+    for i, flist in enumerate(framelistlist):
+        hdr = pyfits.Header()
+        hdr['NLAM'] = len(cfg.sl_list)
+        hdr['ITER'] = i + 1
+        prim = pyfits.PrimaryHDU(header=hdr)
+        img = pyfits.ImageHDU(flist)
+        prev = pyfits.ImageHDU(param_order_to_list(camlist[i][1]))
+        hdul = pyfits.HDUList([prim, img, prev])
+        fnout = os.path.join(outpath, f"iteration_{i+1:04d}", f"images.fits")
+        hdul.writeto(fnout, overwrite=True)
+
+    # Estimated E-fields at each wavelength
+    efields = []
+    for i, oitem in enumerate(otherlist):
+        for n in range(len(cfg.sl_list)):
+            efields.append(np.real(oitem[n]['meas_efield']))
+            efields.append(np.imag(oitem[n]['meas_efield']))
+        hdr = pyfits.Header()
+        hdr['NLAM'] = len(cfg.sl_list)
+        prim = pyfits.PrimaryHDU(header=hdr)
+        img = pyfits.ImageHDU(efields)
+        hdul = pyfits.HDUList([prim, img])
+        fn, fe = os.path.splitext(fileout)
+        fnout = os.path.join(outpath, f"iteration_{i+1:04d}", f"efield_estimations.fits")
+        hdul.writeto(fnout, overwrite=True)
 
 
 if __name__ == "__main__":
