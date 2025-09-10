@@ -28,6 +28,7 @@ from howfsc.model.mode import CoronagraphMode
 
 from howfsc.util.loadyaml import loadyaml
 from howfsc.util.gitl_tools import param_order_to_list
+from howfsc.util.corgitools import save_outputs
 
 from howfsc.gitl import howfsc_computation
 from howfsc.precomp import howfsc_precomputation
@@ -116,6 +117,9 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
     framelistlist = []
     scalelistout = []
     camlist = []
+
+    # New lists compared to original
+    measured_c = []
 
     if nbadpacket < 0:
         raise ValueError('Number of bad packets cannot be less than 0.')
@@ -417,6 +421,9 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
         scalelistout.append(scale_factor_list)
         camlist.append([gain_list, exptime_list, nframes_list])
 
+        # New lists compared to original version
+        measured_c.append(prev_c)
+
         print('-----------------------------------')
         print('Iteration: ' + str(iteration))
         print('HOWFSC computation time: ' + str(t1-t0))
@@ -527,6 +534,8 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
         prev = pyfits.ImageHDU(prev_exptime_list)
         hdul = pyfits.HDUList([prim, img, prev])
         hdul.writeto(fileout, overwrite=True)
+
+        save_outputs(fileout, cfg, camlist, framelistlist, otherlist, measured_c)
 
 
 if __name__ == "__main__":
