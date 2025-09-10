@@ -538,16 +538,21 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
         hdul.writeto(fileout, overwrite=True)
 
         ### Minimal change to save data from each iteration
+        outpath = os.path.dirname(fileout)
 
         # Plot measured_c vs iteration
-        fn, fe = os.path.splitext(fileout)
-
         plt.figure()
         plt.plot(np.arange(len(measured_c)) + 1, measured_c, marker='o')
         plt.xlabel('Iteration')
         plt.ylabel('Measured Contrast')
-        plt.savefig(f"{fn}_contrast_vs_iteration.pdf")
+        plt.savefig(os.path.join(outpath, "contrast_vs_iteration.pdf"))
         plt.close()
+
+        # Create one subdirectory per iteration
+        for i in range(len(framelistlist)):
+            iterpath = os.path.join(outpath, f"iteration_{i+1:04d}")
+            if not os.path.exists(iterpath):
+                os.makedirs(iterpath)
 
         # Unprobed and probed images, in all wavelengths
         for i, flist in enumerate(framelistlist):
@@ -558,8 +563,7 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
             img = pyfits.ImageHDU(flist)
             prev = pyfits.ImageHDU(param_order_to_list(camlist[i][1]))
             hdul = pyfits.HDUList([prim, img, prev])
-            fn, fe = os.path.splitext(fileout)
-            fnout = f"{fn}_iter_{i+1:04d}{fe}"  # e.g. _iteration_0001.fits, can be changed to something else
+            fnout = os.path.join(outpath, f"iteration_{i+1:04d}", f"images.fits")
             hdul.writeto(fnout, overwrite=True)
 
         # Estimated E-fields at each wavelength
@@ -574,7 +578,7 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
             img = pyfits.ImageHDU(efields)
             hdul = pyfits.HDUList([prim, img])
             fn, fe = os.path.splitext(fileout)
-            fnout = f"{fn}_estimated_efields_iter_{i+1:04d}{fe}"
+            fnout = os.path.join(outpath, f"iteration_{i+1:04d}", f"efield_estimations.fits")
             hdul.writeto(fnout, overwrite=True)
 
 
