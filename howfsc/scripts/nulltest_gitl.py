@@ -564,7 +564,7 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
 
         # Estimated E-fields at each wavelength
         efields = []
-        for oitem in otherlist:
+        for i, oitem in enumerate(otherlist):
             for n in range(nlam):
                 efields.append(np.real(oitem[n]['meas_efield']))
                 efields.append(np.imag(oitem[n]['meas_efield']))
