@@ -67,6 +67,5 @@ def save_outputs(fileout, cfg, camlist, framelistlist, otherlist, measured_c):
         prim = pyfits.PrimaryHDU(header=hdr)
         img = pyfits.ImageHDU(efields)
         hdul = pyfits.HDUList([prim, img])
-        fn, fe = os.path.splitext(fileout)
         fnout = os.path.join(outpath, f"iteration_{i+1:04d}", f"efield_estimations.fits")
         hdul.writeto(fnout, overwrite=True)
