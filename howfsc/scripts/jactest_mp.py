@@ -26,7 +26,7 @@ import howfsc.util.check as check
 JACMETHOD = 'fast'
 
 
-def calculate_jacobian_multiprocessed(mode='narrowfov', nact=None, output=None, proc=None, num_threads=None):
+def calculate_jacobian_multiprocessed(mode='narrowfov', howfsc_file=howfsc.__file__, nact=None, output=None, proc=None, num_threads=None):
     """
     Compute a full or partial Jacobian using multiple processors.
 
@@ -56,33 +56,49 @@ def calculate_jacobian_multiprocessed(mode='narrowfov', nact=None, output=None, 
     if mode == 'widefov':
         print('mode = widefov')
         cfgpath = os.path.join(os.path.dirname(
-                       os.path.abspath(howfsc.__file__)),
+                       os.path.abspath(howfsc_file)),
                        'model', 'testdata', 'widefov', 'widefov.yaml')
         pass
     elif mode == 'narrowfov':
         print('mode = narrowfov')
         cfgpath = os.path.join(os.path.dirname(
-                       os.path.abspath(howfsc.__file__)),
+                       os.path.abspath(howfsc_file)),
                        'model', 'testdata', 'narrowfov', 'narrowfov.yaml')
         pass
     elif mode == 'spectroscopy':
         print('mode = spectroscopy')
         cfgpath = os.path.join(os.path.dirname(
-                     os.path.abspath(howfsc.__file__)),
+                     os.path.abspath(howfsc_file)),
                      'model', 'testdata', 'spectroscopy', 'spectroscopy.yaml')
         pass
     elif mode == 'nfov_dm':
         print('mode = nfov_dm')
         cfgpath = os.path.join(os.path.dirname(
-                     os.path.abspath(howfsc.__file__)),
+                     os.path.abspath(howfsc_file)),
                      'model', 'testdata', 'narrowfov', 'narrowfov_dm.yaml')
         pass
     elif mode == 'nfov_flat':
         print('mode = nfov_flat')
         cfgpath = os.path.join(os.path.dirname(
-                     os.path.abspath(howfsc.__file__)),
+                     os.path.abspath(howfsc_file)),
                      'model', 'testdata', 'narrowfov', 'narrowfov_flat.yaml')
         pass
+    elif mode == 'nfov_band1_flat':
+        print('mode = nfov_band1_flat')
+        # TODO: fix
+        cfgpath = os.path.join(os.path.dirname(
+                     os.path.abspath(howfsc_file)),
+                     'model', 'testdata', 'nfov_band1_flat', 'narrowfov.yaml')
+        pass
+
+    elif mode == 'wfov_band4_flat':
+        print('mode = wfov_band4_flat')
+        # TODO: fix
+        cfgpath = os.path.join(os.path.dirname(
+                     os.path.abspath(howfsc_file)),
+                     'model', 'testdata', 'wfov_band4_flat', 'widefov.yaml')
+        pass
+
     else:
         # Should never reach this if choices=[..] works right
         raise Exception('Bad input for coronagraph mode')
@@ -212,7 +228,7 @@ if __name__ == "__main__":
 
     ap.add_argument('-o', '--output', help="output file for Jacobian; will be in FITS format", type=str)
 
-    ap.add_argument('--mode', default='widefov', choices=['widefov', 'narrowfov', 'spectroscopy', 'nfov_dm', 'nfov_flat'], help="coronagraph mode from test data; must be one of 'widefov' (default), 'narrowfov', 'nfov_dm', 'nfov_flat', or 'spectroscopy'")
+    ap.add_argument('--mode', default='widefov', choices=['widefov', 'narrowfov', 'spectroscopy', 'nfov_dm', 'nfov_flat', 'nfov_band1_flat', 'wfov_band4_flat'], help="coronagraph mode from test data; must be one of 'widefov' (default), 'narrowfov', 'nfov_dm', 'nfov_flat', or 'spectroscopy'")
 
     ap.add_argument('-p', '--proc', default=None,
                     help="number of processes, defaults to 1", type=int)
