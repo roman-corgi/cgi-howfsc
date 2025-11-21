@@ -111,3 +111,61 @@ def sim_gitlframe(cfg, dmlist, fixedbp, peakflux, exptime, crop, lind,
     frame = idh[crop[0]:crop[0]+nrow, crop[1]:crop[1]+ncol]
 
     return frame
+
+
+def get_efield_cgihowfsc(cfg, dmlist, fixedbp, peakflux, exptime, crop, lind,
+                         cleanrow=1024, cleancol=1024):
+    """
+    Compute the complex efield using cgi_howfsc optical model.
+    """
+    # Check inputs
+    if not isinstance(cfg, CoronagraphMode):
+        raise TypeError('Input model must be a CoronagraphMode object')
+
+    if not isinstance(dmlist, list):
+        raise TypeError('dmlist must be a list')
+    if len(dmlist) != len(cfg.dmlist):
+        raise TypeError('Number of DMs does not match model')
+    for index, dm in enumerate(dmlist):
+        check.twoD_array(dm, 'dm', TypeError)
+        nact = cfg.dmlist[index].registration['nact']
+        if dm.shape != (nact, nact):
+            raise TypeError('DM dimensions do not match model')
+        pass
+
+    check.twoD_array(fixedbp, 'fixedbp', TypeError)
+    if fixedbp.shape != (cleanrow, cleancol):
+        raise TypeError('fixedbp must be the same size as a cleaned frame')
+    if fixedbp.dtype != bool:
+        raise TypeError('fixedbp must be boolean')
+
+    check.real_positive_scalar(peakflux, 'peakflux', TypeError)
+    check.real_positive_scalar(exptime, 'exptime', TypeError)
+
+    if not isinstance(crop, tuple):
+        raise TypeError('crop must be a tuple')
+    if len(crop) != 4:
+        raise TypeError('crop must be a 4-tuple')
+    check.nonnegative_scalar_integer(crop[0], 'crop[0]', TypeError)
+    check.nonnegative_scalar_integer(crop[1], 'crop[1]', TypeError)
+    check.positive_scalar_integer(crop[2], 'crop[2]', TypeError)
+    check.positive_scalar_integer(crop[3], 'crop[3]', TypeError)
+
+    check.nonnegative_scalar_integer(lind, 'lind', TypeError)
+    if lind >= len(cfg.sl_list):
+        raise ValueError('lind must be < len(cfg.sl_list)')
+    check.positive_scalar_integer(cleanrow, 'cleanrow', TypeError)
+    check.positive_scalar_integer(cleancol, 'cleancol', TypeError)
+
+    # --- COMPUTATION ---
+
+    edm = cfg.sl_list[lind].eprop(dmlist)
+    ely = cfg.sl_list[lind].proptolyot(edm)
+    edh = cfg.sl_list[lind].proptodh(ely)
+
+    efield_full = insertinto(edh, (cleanrow, cleancol))
+
+    r_start, c_start, nrow, ncol = crop
+    efield_cropped = efield_full[r_start:r_start + nrow, c_start:c_start + ncol]
+
+    return efield_cropped
