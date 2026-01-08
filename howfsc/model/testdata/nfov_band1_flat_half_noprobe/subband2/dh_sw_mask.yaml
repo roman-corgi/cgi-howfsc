@@ -1,0 +1,13 @@
+nRows: 79
+nCols: 79
+shapes:
+  shape0:
+    shape: annular_sector
+    radiusInnerLamD: 2.8
+    radiusOuterLamD: 9.7
+    xOffset: 0
+    yOffset: 0
+    openingAngle: 180
+    clocking: 90
+    radiusInner: 11.2
+    radiusOuter: 38.8

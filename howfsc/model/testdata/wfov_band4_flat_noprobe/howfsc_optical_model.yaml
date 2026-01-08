@@ -1,0 +1,198 @@
+dms:
+  DM1:
+    pitch: 0.0009906
+    registration:
+      dx: -0.005773220757181754
+      dy: -0.051787920052533354
+      inffn: ../dm1/dm_1236-2_brian_inf_v1.0.fits
+      nact: 48
+      ppact_cx: 6.411760643456628
+      ppact_cy: 6.314957781558646
+      ppact_d: 13
+      thact: 90.02744242651791
+      flipx: true
+    voltages:
+      gainfn: gain_map_dm1.fits
+      vmax: 100
+      vmin: 0
+      vneighbor: 50.0
+      vcorner: 75.0
+      vquant: 0.001678466796875
+      tiefn: ../dm1/tied_actuator_map.fits
+      flatfn: ../dm1/dm_allzeros.fits
+      crosstalkfn: null
+    z: 0.0
+  DM2:
+    pitch: 0.0009906
+    registration:
+      dx: 0.11326435347310934
+      dy: -0.5875471296628845
+      inffn: ../dm2/dm_1236-5_brian_inf_v1.0.fits
+      nact: 48
+      ppact_cx: 6.406261698222381
+      ppact_cy: 6.307387705381232
+      ppact_d: 13
+      thact: 90.00609243710815
+      flipx: false
+    voltages:
+      gainfn: gain_map_dm2.fits
+      vmax: 100
+      vmin: 0
+      vneighbor: 50.0
+      vcorner: 75.0
+      vquant: 0.001678466796875
+      tiefn: ../dm2/tied_actuator_map.fits
+      flatfn: ../dm2/dm_allzeros.fits
+      crosstalkfn: ../dm2/crosstalk_dm2_20240719.yaml
+    z: 1.0
+init:
+  DM1:
+    dminit: dmabs_init_dm1.fits
+  DM2:
+    dminit: dmabs_init_dm2.fits
+sls:
+  0:
+    lam: 7.77975e-07
+    ft_dir: reverse
+    sp:
+      afn: spm_amp.fits
+      pdp: 296.10504150390625
+      pfn: subband0/spm_ph.fits
+    lyot:
+      afn: lyot_amp.fits
+      pdp: 296.10504150390625
+      pfn: subband0/lyot_ph.fits
+      tip: 0
+      tilt: 0
+    epup:
+      afn: epup_amp.fits
+      pdp: 296.10504150390625
+      pfn: subband0/epup_ph.fits
+      tip: 0
+      tilt: 0
+    fs:
+      afn: ones_like_fs.fits
+      pfn: zeros_like_fs.fits
+      ppl: 2.8289999999999997
+    fpm:
+      afn: subband0/fpm_amp.fits
+      isopen: false
+      pfn: subband0/fpm_ph.fits
+      ppl: 4.714999999999999
+    dh: subband0/dh_sw_mask.fits
+  1:
+    lam: 8.014874999999999e-07
+    ft_dir: reverse
+    sp:
+      afn: spm_amp.fits
+      pdp: 296.10504150390625
+      pfn: subband1/spm_ph.fits
+    lyot:
+      afn: lyot_amp.fits
+      pdp: 296.10504150390625
+      pfn: subband1/lyot_ph.fits
+      tip: 0
+      tilt: 0
+    epup:
+      afn: epup_amp.fits
+      pdp: 296.10504150390625
+      pfn: subband1/epup_ph.fits
+      tip: 0
+      tilt: 0
+    fs:
+      afn: ones_like_fs.fits
+      pfn: zeros_like_fs.fits
+      ppl: 2.9145
+    fpm:
+      afn: subband1/fpm_amp.fits
+      isopen: false
+      pfn: subband1/fpm_ph.fits
+      ppl: 4.8575
+    dh: subband1/dh_sw_mask.fits
+  2:
+    lam: 8.25e-07
+    ft_dir: reverse
+    sp:
+      afn: spm_amp.fits
+      pdp: 296.10504150390625
+      pfn: subband2/spm_ph.fits
+    lyot:
+      afn: lyot_amp.fits
+      pdp: 296.10504150390625
+      pfn: subband2/lyot_ph.fits
+      tip: 0
+      tilt: 0
+    epup:
+      afn: epup_amp.fits
+      pdp: 296.10504150390625
+      pfn: subband2/epup_ph.fits
+      tip: 0
+      tilt: 0
+    fs:
+      afn: ones_like_fs.fits
+      pfn: zeros_like_fs.fits
+      ppl: 3.0
+    fpm:
+      afn: subband2/fpm_amp.fits
+      isopen: false
+      pfn: subband2/fpm_ph.fits
+      ppl: 5.0
+    dh: subband2/dh_sw_mask.fits
+  3:
+    lam: 8.485125e-07
+    ft_dir: reverse
+    sp:
+      afn: spm_amp.fits
+      pdp: 296.10504150390625
+      pfn: subband3/spm_ph.fits
+    lyot:
+      afn: lyot_amp.fits
+      pdp: 296.10504150390625
+      pfn: subband3/lyot_ph.fits
+      tip: 0
+      tilt: 0
+    epup:
+      afn: epup_amp.fits
+      pdp: 296.10504150390625
+      pfn: subband3/epup_ph.fits
+      tip: 0
+      tilt: 0
+    fs:
+      afn: ones_like_fs.fits
+      pfn: zeros_like_fs.fits
+      ppl: 3.0855
+    fpm:
+      afn: subband3/fpm_amp.fits
+      isopen: false
+      pfn: subband3/fpm_ph.fits
+      ppl: 5.1425
+    dh: subband3/dh_sw_mask.fits
+  4:
+    lam: 8.72025e-07
+    ft_dir: reverse
+    sp:
+      afn: spm_amp.fits
+      pdp: 296.10504150390625
+      pfn: subband4/spm_ph.fits
+    lyot:
+      afn: lyot_amp.fits
+      pdp: 296.10504150390625
+      pfn: subband4/lyot_ph.fits
+      tip: 0
+      tilt: 0
+    epup:
+      afn: epup_amp.fits
+      pdp: 296.10504150390625
+      pfn: subband4/epup_ph.fits
+      tip: 0
+      tilt: 0
+    fs:
+      afn: ones_like_fs.fits
+      pfn: zeros_like_fs.fits
+      ppl: 3.1710000000000003
+    fpm:
+      afn: subband4/fpm_amp.fits
+      isopen: false
+      pfn: subband4/fpm_ph.fits
+      ppl: 5.285
+    dh: subband4/dh_sw_mask.fits

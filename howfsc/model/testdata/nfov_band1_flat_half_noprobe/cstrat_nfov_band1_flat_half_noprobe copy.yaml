@@ -1,0 +1,302 @@
+regularization:
+  -
+    first: 1
+    last: 3
+    low: 0
+    high: 2.0e-5
+    value: -2.0
+  -
+    first: 4
+    last: 4
+    low: 0
+    high: 2.0e-5
+    value: -5.0
+  -
+    first: 5
+    last: 7
+    low: 0
+    high: 2.0e-5
+    value: -2.5
+  -
+    first: 8
+    last: 8
+    low: 0
+    high: 2.0e-5
+    value: -5.0
+  -
+    first: 9
+    last: 11
+    low: 0
+    high: 2.0e-5
+    value: -3.0
+  -
+    first: 12
+    last: 12
+    low: 0
+    high: 2.0e-5
+    value: -5.5
+  -
+    first: 13
+    last: 15
+    low: 0
+    high: 2.0e-5
+    value: -3.0
+  -
+    first: 16
+    last: 16
+    low: 0
+    high: 2.0e-5
+    value: -6.0
+  -
+    first: 17
+    last: 19
+    low: 0
+    high: 2.0e-5
+    value: -3.0
+  -
+    first: 20
+    last: 20
+    low: 0
+    high: 2.0e-5
+    value: -6.0
+  -
+    first: 21
+    last: 23
+    low: 0
+    high: 2.0e-5
+    value: -3.0
+  -
+    first: 24
+    last: 24
+    low: 0
+    high: 2.0e-5
+    value: -6.0
+  -
+    first: 25
+    last: 27
+    low: 0
+    high: 2.0e-5
+    value: -3.0
+  -
+    first: 28
+    last: 28
+    low: 0
+    high: 2.0e-5
+    value: -6.0
+  -
+    first: 29
+    last: 31
+    low: 0
+    high: 2.0e-5
+    value: -3.0
+  -
+    first: 32
+    last: 32
+    low: 0
+    high: 2.0e-5
+    value: -6.0
+  -
+    first: 33
+    last: 35
+    low: 0
+    high: 2.0e-5
+    value: -3.0
+  -
+    first: 36
+    last: 36
+    low: 0
+    high: 2.0e-5
+    value: -6.0
+  -
+    first: 37
+    last: 39
+    low: 0
+    high: 2.0e-5
+    value: -3.0
+  -
+    first: 40
+    last: 50
+    low: 0
+    high: 2.0e-5
+    value: -5.0
+  -
+    first: 51
+    last: 54
+    low: 0
+    high: 2.0e-5
+    value: -2.0
+  -
+    first: 55
+    last: 55
+    low: 0
+    high: 2.0e-5
+    value: -5.0
+  -
+    first: 56
+    last: 59
+    low: 0
+    high: 2.0e-5
+    value: -2.0
+  -
+    first: 60
+    last: 60
+    low: 0
+    high: 2.0e-5
+    value: -5.0
+  -
+    first: 61
+    last: 64
+    low: 0
+    high: 2.0e-5
+    value: -2.0
+  -
+    first: 65
+    last: 65
+    low: 0
+    high: 2.0e-5
+    value: -5.0
+  -
+    first: 66
+    last: 69
+    low: 0
+    high: 2.0e-5
+    value: -2.0
+  -
+    first: 70
+    last: 70
+    low: 0
+    high: 2.0e-5
+    value: -5.0
+  -
+    first: 71
+    last: 74
+    low: 0
+    high: 2.0e-5
+    value: -2.0
+  -
+    first: 75
+    last: 75
+    low: 0
+    high: 2.0e-5
+    value: -5.0
+  -
+    first: 76
+    last: 79
+    low: 0
+    high: 2.0e-5
+    value: -2.0
+  -
+    first: 80
+    last: 80
+    low: 0
+    high: 2.0e-5
+    value: -5.0
+  -
+    first: 81
+    last: 84
+    low: 0
+    high: 2.0e-5
+    value: -2.0
+  -
+    first: 85
+    last: 85
+    low: 0
+    high: 2.0e-5
+    value: -5.0
+  -
+    first: 86
+    last: 89
+    low: 0
+    high: 2.0e-5
+    value: -2.0
+  -
+    first: 90
+    last: 90
+    low: 0
+    high: 2.0e-5
+    value: -5.0
+  -
+    first: 91
+    last: 94
+    low: 0
+    high: 2.0e-5
+    value: -2.0
+  -
+    first: 95
+    last: 95
+    low: 0
+    high: 2.0e-5
+    value: -5.0
+  -
+    first: 96
+    last: 99
+    low: 0
+    high: 2.0e-5
+    value: -2.0
+  -
+    first: 100
+    last: None
+    low: 0
+    high: 2.0e-5
+    value: -2.0
+  -
+    first: 1
+    last: None
+    low: 2.0e-5
+    high: None
+    value: -2.0
+
+pixelweights:
+  -
+    first: 1
+    last: None
+    low: 0
+    high: None
+    value: 'pixelweights_ones_nlam7_nrow79.fits'
+
+dmmultgain:
+  -
+    first: 1
+    last: None
+    low: 0
+    high: None
+    value: 1
+
+unprobedsnr:
+  -
+    first: 1
+    last: None
+    low: 0
+    high: None
+    value: 5
+
+probedsnr:
+  -
+    first: 1
+    last: None
+    low: 0
+    high: None
+    value: 7
+
+probeheight:
+  -
+    first: 1
+    last: None
+    low: 0
+    high: 1.0e-7
+    value: 1.0e-7
+  -
+    first: 1
+    last: None
+    low: 1.0e-7
+    high: 1.0e-6
+    value: 1.0e-6
+  -
+    first: 1
+    last: None
+    low: 1.0e-6
+    high: None
+    value: 1.0e-5
+
+
+fixedbp: 'fixedbp_zeros.fits'

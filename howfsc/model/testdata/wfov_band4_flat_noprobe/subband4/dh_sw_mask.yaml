@@ -1,0 +1,11 @@
+nRows: 125
+nCols: 125
+shapes:
+  shape0:
+    shape: annulus
+    radiusInnerLamD: 5.6
+    radiusOuterLamD: 20.4
+    xOffset: 0
+    yOffset: 0
+    radiusInner: 16.799999999999997
+    radiusOuter: 61.199999999999996
