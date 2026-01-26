@@ -6,14 +6,16 @@
 """
 Functions to build a relative DM probe and other propagation manipulation
 """
-
+import copy
 import numpy as np
 
 from howfsc.model.mode import CoronagraphMode
+from howfsc.util.constrain_dm import tie_with_matrix
 from howfsc.util.dmshapes import probe
 from howfsc.util.dmhtoph import dmhtoph
 from howfsc.util.insertinto import insertinto
 import howfsc.util.check as check
+
 
 def efield(cfg, dmlist, ind):
     """
@@ -108,10 +110,14 @@ def open_efield(cfg, dmlist, ind):
     if ind >= len(cfg.sl_list):
         raise TypeError('ind must be less than the number of channels in cfg')
 
-    sl = cfg.sl_list[ind]
+    # Make the field stop all ones so that the stellar peak is not blocked
+    cfgNoFS = copy.deepcopy(cfg)
+    sl = cfgNoFS.sl_list[ind]
+    sl.fs.e = np.ones_like(sl.fs.e)
     edm0 = sl.eprop(dmlist)
     ely = sl.proptolyot_nofpm(edm0)
     edh0 = sl.proptodh(ely)
+
     return edh0
 
 
@@ -201,10 +207,9 @@ def model_pm0(cfg, dm0, dmplus, dmminus, otherdm, ind, swap_dms=False):
     return (np.abs(edhp)**2 + np.abs(edhm)**2)/2 - np.abs(edh0)**2
 
 
-
 def make_dmrel_probe(cfg, dmlist, dact, xcenter, ycenter, clock, ximin, ximax,
-                      etamin, etamax, phase, target, lod_min, lod_max,
-                      ind, maxiter=5, verbose=True):
+                     etamin, etamax, phase, target, lod_min, lod_max,
+                     ind, maxiter=5, verbose=True):
     """
     Make a relative DM probe setting whose probe height is equal to an input
 
@@ -357,9 +362,10 @@ def make_dmrel_probe(cfg, dmlist, dact, xcenter, ycenter, clock, ximin, ximax,
                     ximax,
                     etamin,
                     etamax,
-                    90, # always do cosine first, since there's no nulls
+                    phase, #90, # always do cosine first, since there's no nulls
                     )
-        dpv = cfg.dmlist[dind].dmvobj.dmh_to_volts(dp0, cfg.sl_list[ind].lam)
+        dp1 = tie_with_matrix(dp0, cfg.dmlist[dind].dmvobj.tiemap)
+        dpv = cfg.dmlist[dind].dmvobj.dmh_to_volts(dp1, cfg.sl_list[ind].lam)
 
         eplus = efield(cfg, [dmlist[0]+dpv, dmlist[1]], ind)
         eminus = efield(cfg, [dmlist[0]-dpv, dmlist[1]], ind)
@@ -388,8 +394,8 @@ def make_dmrel_probe(cfg, dmlist, dact, xcenter, ycenter, clock, ximin, ximax,
                 etamax,
                 phase,
                 )
-
-    dpv = cfg.dmlist[dind].dmvobj.dmh_to_volts(dp0, cfg.sl_list[ind].lam)
+    dp1 = tie_with_matrix(dp0, cfg.dmlist[dind].dmvobj.tiemap)
+    dpv = cfg.dmlist[dind].dmvobj.dmh_to_volts(dp1, cfg.sl_list[ind].lam)
 
     # create additional data products to help users
     epups = cfg.sl_list[ind].epup.e.shape

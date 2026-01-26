@@ -1,0 +1,2013 @@
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 82.832124 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.974033 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 1
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 4.33229e-06
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -2
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 1.96665e-06
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 84.952525 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.936648 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 2
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 1.96665e-06
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -2
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 1.25688e-06
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 87.788337 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.894895 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 3
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 1.25688e-06
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -2
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 9.32823e-07
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 85.748932 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 4.080706 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 4
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 9.32823e-07
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 1.0695e-06
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 83.882021 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.943620 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 5
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 1.0695e-06
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -2.5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 2.46092e-07
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 88.969607 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.918157 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 6
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 2.46092e-07
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -2.5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 9.15673e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 87.773688 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.947212 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 7
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 9.15673e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -2.5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 5.08561e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 79.160032 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.993330 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 8
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 5.08561e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 1.20214e-07
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 83.662838 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.937413 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 9
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 1.20214e-07
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 3.33484e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 88.253214 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 4.054282 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 10
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 3.33484e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 1.49682e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 87.242437 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.887393 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 11
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 1.49682e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 1.00329e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 88.780439 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.995001 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 12
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 1.00329e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -5.5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 8.34548e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 92.923426 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.984314 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 13
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 8.34548e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 2.09708e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 90.820674 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.900391 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 14
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 2.09708e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 9.02328e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 92.538128 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.948834 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 15
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 9.02328e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 6.01323e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 95.422040 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.981055 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 16
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 6.01323e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -6
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 1.16486e-07
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 87.404940 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.885878 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 17
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 1.16486e-07
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 2.70883e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 90.404546 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.884273 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 18
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 2.70883e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 9.55303e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 91.366219 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.997396 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 19
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 9.55303e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 5.18356e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 81.449348 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.914400 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 20
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 5.18356e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -6
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 5.74118e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 86.121609 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.879353 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 21
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 5.74118e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 1.44541e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 78.758033 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.957437 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 22
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 1.44541e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 5.76457e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 83.355325 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.687397 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 23
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 5.76457e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 3.6314e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 83.268859 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.795634 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 24
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 3.6314e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -6
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 3.6269e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 85.288672 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.718404 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 25
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 3.6269e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 9.60033e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 86.873864 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.805008 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 26
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 9.60033e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 4.22946e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 87.362758 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.948022 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 27
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 4.22946e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 2.94581e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 85.824470 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.893122 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 28
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 2.94581e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -6
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 2.55421e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 86.664344 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.940597 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 29
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 2.55421e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 7.10949e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 87.270849 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.783745 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 30
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 7.10949e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 3.4383e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 84.880879 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.716122 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 31
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 3.4383e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 2.57608e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 84.483740 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.815328 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 32
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 2.57608e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -6
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 1.90761e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 86.115742 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.922149 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 33
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 1.90761e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 5.6209e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 89.487802 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.939586 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 34
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 5.6209e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3.5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 3.08941e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 85.843907 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.809509 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 35
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 3.08941e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3.5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 2.37817e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 86.659174 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.933333 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 36
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 2.37817e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -6.5
+INFO:howfsc.gitl:dmmultgain = 0.75
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 4.19579e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 86.549051 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.915611 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 37
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 4.19579e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 1.04796e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 76.916026 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.804426 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 38
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 1.04796e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3.5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 4.49824e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 88.047338 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.962187 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 39
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 4.49824e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3.5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 2.7523e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 85.676640 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.932588 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 40
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 2.7523e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -6.5
+INFO:howfsc.gitl:dmmultgain = 0.75
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 3.01207e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 88.902163 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.937507 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 41
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 3.01207e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 7.7804e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 100.945937 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 4.185499 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 42
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 7.7804e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3.5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 3.62633e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 102.196672 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 4.064928 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 43
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 3.62633e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3.5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 2.42467e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 85.518143 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.890572 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 44
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 2.42467e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -6.5
+INFO:howfsc.gitl:dmmultgain = 0.75
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 2.19972e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 109.947391 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 4.085707 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 45
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 2.19972e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 5.97465e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 86.938533 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.862699 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 46
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 5.97465e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3.5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 3.03008e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 80.862849 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.877347 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 47
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 3.03008e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3.5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 2.1803e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 85.849717 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.912132 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 48
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 2.1803e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -7
+INFO:howfsc.gitl:dmmultgain = 0.5
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 3.15888e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 84.455743 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.882282 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 49
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 3.15888e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 8.09405e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 86.416352 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.953489 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 50
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 8.09405e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3.5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 3.71099e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 90.018451 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.955297 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 51
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 3.71099e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3.5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 2.37739e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 87.108802 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.984984 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 52
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 2.37739e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -7
+INFO:howfsc.gitl:dmmultgain = 0.5
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 2.32822e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 80.330732 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.896392 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 53
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 2.32822e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 6.13609e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 88.748597 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.865124 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 54
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 6.13609e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3.5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 3.05468e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 83.916855 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.883479 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 55
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 3.05468e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3.5
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 2.13041e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 84.742038 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.878100 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 56
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 2.13041e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -7
+INFO:howfsc.gitl:dmmultgain = 0.5
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 1.80296e-08
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 86.123726 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.940574 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 57
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 1.80296e-08
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -4
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 5.26045e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 87.304194 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.931424 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 58
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 5.26045e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 2.44672e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 84.821668 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.945033 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 59
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 2.44672e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -3
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 1.83252e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 81.859909 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.879535 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 60
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 1.83252e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -2
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 1.64287e-09
+INFO:howfsc.gitl:Return data tuple
+INFO:root:Begin Jacobian calculation
+INFO:root:multiprocessing using 8 processes
+INFO:root:setting os.environ[MKL_NUM_THREADS] 1 threads
+INFO:root:resetting nkl num threads to previous value
+INFO:root:Jacobian calculation complete: elapsed time = 86.496347 secs
+INFO:root:Begin JTWJ calculation
+INFO:root:All JTWJ calculations complete: elapsed time = 3.916081 secs
+INFO:root:Skipping n2clist calculation, populate with ones
+INFO:howfsc.gitl:Begin input checks
+INFO:howfsc.gitl:Iteration number: 61
+INFO:howfsc.gitl:Input checks complete
+INFO:howfsc.gitl:1. Compute the complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:2. Compute previous mean total normalized intensity.
+INFO:howfsc.gitl:Previous NI = 1.64287e-09
+INFO:howfsc.gitl:3. Compute control strategy parameters
+INFO:howfsc.gitl:beta = -2
+INFO:howfsc.gitl:dmmultgain = 1
+INFO:howfsc.gitl:4. Compute change in DM settings from electric fields
+INFO:howfsc.gitl:5. Compute absolute DM settings with constraints applied
+INFO:howfsc.gitl:6. Compute the new complex electric fields at each wavelength.
+INFO:howfsc.gitl:Wavelength 1 of 5
+INFO:howfsc.gitl:Wavelength 2 of 5
+INFO:howfsc.gitl:Wavelength 3 of 5
+INFO:howfsc.gitl:Wavelength 4 of 5
+INFO:howfsc.gitl:Wavelength 5 of 5
+INFO:howfsc.gitl:7. Compute new mean total normalized intensity
+INFO:howfsc.gitl:Next NI = 1.59561e-09
+INFO:howfsc.gitl:Return data tuple
