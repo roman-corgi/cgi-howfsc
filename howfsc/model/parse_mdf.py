@@ -442,7 +442,7 @@ def check_mode_lists(fn, usefiles):
     for k in keys2b:
         _exact_keys(y0['init'][k], keys2bi, errstr='check 2bi')
 
-        # 2bi1. The key “dminit” shall be a string.  This string should contain
+        # 2bi1. The key "dminit" shall be a string.  This string should contain
         # a path to a FITS file with a 48x48 DM setting in floating-point
         # voltage with the absolute voltage on DM1 or DM2 at the time of
         # collection of input-wavefront data ('epup').  However, validation of
@@ -695,8 +695,8 @@ def check_mode_lists(fn, usefiles):
 
         # 2ci4c. 'isopen' shall be a Boolean which indicates whether the edge
         # of the mask representation is open or closed.  An open representation
-        # means the open area of the mask has no outer boundary—at least not
-        # in the model representation—while a closed representation does have
+        # means the open area of the mask has no outer boundary--at least not
+        # in the model representation--while a closed representation does have
         # an outer edge beyond while no light is transmitted.  This is used by
         # the model to choose a propagation path which minimizes computation.
         # The value 'True' implies an open representation and 'False' implies
@@ -767,7 +767,7 @@ def check_mode_lists(fn, usefiles):
 
         # 2ci5bi. If 'isopen' is 'True' in 'fpm', this value shall be the same
         # as the value in 'sp'.  If this is not true, that propagation path
-        # (using Babinet’s principle) will not function correctly.  This
+        # (using Babinet's principle) will not function correctly.  This
         # constraint does not apply if 'isopen' is 'False' in 'fpm'.
         if y0['sls'][k]['fpm']['isopen']:
             sp_pdp = _tofloat(y0['sls'][k]['sp']['pdp'], 'sp pdp')
