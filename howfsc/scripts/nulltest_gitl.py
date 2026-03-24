@@ -31,6 +31,7 @@ from howfsc.util.gitl_tools import param_order_to_list
 from howfsc.util.corgitools import save_outputs
 
 from howfsc.gitl import howfsc_computation
+from howfsc.open_loop_gitl import howfsc_computation_open_loop
 from howfsc.precomp import howfsc_precomputation
 
 from howfsc.scripts.gitlframes import sim_gitlframe
@@ -39,11 +40,13 @@ eetc_path = os.path.dirname(os.path.abspath(eetc.__file__))
 howfscpath = os.path.dirname(os.path.abspath(howfsc.__file__))
 defjacpath = os.path.join(os.path.dirname(howfscpath), 'jacdata')
 
+is_open_loop = False
 
 def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fracbadpix=0, nbadpacket=0,
                       nbadframe=0, fileout=None, stellar_vmag=None, stellar_type=None,
                       stellar_vmag_target=None, stellar_type_target=None, jacpath=defjacpath,
                       precomp='load_all', num_process=None, num_threads=None):
+
     """Run a nulling sequence, using the compact optical model as the data source.
 
     Parameters:
@@ -404,11 +407,22 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
         if isprof:
             pr.enable()
             pass
-        abs_dm1, abs_dm2, scale_factor_list, gain_list, exptime_list, \
-        nframes_list, prev_c, next_c, next_time, status, other = \
-        howfsc_computation(framelist, dm1_list, dm2_list, cfg, jac, jtwj_map,
-                           croplist, prev_exptime_list,
-                           cstrat, n2clist, hconf, iteration)
+
+
+        if is_open_loop is True:
+            # open loop 
+            abs_dm1, abs_dm2, scale_factor_list, gain_list, exptime_list, \
+            nframes_list, prev_c, next_c, next_time, status, other = \
+            howfsc_computation_open_loop(framelist, dm1_list, dm2_list, cfg, jac, jtwj_map,
+                                         croplist, prev_exptime_list,
+                                         cstrat, n2clist, hconf, iteration)
+        else: 
+            # close loop
+            abs_dm1, abs_dm2, scale_factor_list, gain_list, exptime_list, \
+            nframes_list, prev_c, next_c, next_time, status, other = \
+            howfsc_computation(framelist, dm1_list, dm2_list, cfg, jac, jtwj_map,
+                            croplist, prev_exptime_list,
+                            cstrat, n2clist, hconf, iteration)
         if isprof:
             pr.disable()
             pass
