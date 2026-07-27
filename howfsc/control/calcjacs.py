@@ -113,16 +113,22 @@ def calcjacs(cfg, ijlist, dm0list=None, jacmethod='normal', num_process=1):
     ### apply crosstalk
     #
     # Modify jac.
-    #    Definition of crosstalk in Jacobian (e.g. offset = [io, jo]):
-    #    J_xtalk[:, ij, :] = sl.propagate_to_dh(dmh(i,j)
-    #                        + xtalk(i,j)*dmh(i+io,j+jo))
-    #    we approximate with:
-    #    J_xtalk[:, ij, :] = sl.pokeprop(ij) + xtalk[ij]*sl.pokeprop(i+io,j+jo)
-    #    equals (where J[] is Jacobian with no crosstalk)
-    #    J_xtalk[:, ij, :] = J[:,ij,:] + xtalk[ij]*J[:,(i+io,j+jo),:]
-    #    in sparse matrix form:
-    #    J_xtalk = HC_sparse @ J
+    #    Definition of crosstalk in Jacobian
+    #    J_xtalk[:, ij, :] = (d/dh_ij)sl.propagate_to_dh( Edm(xtalk(kl, ij)*dmh(ij)) )
+    #    where xtalk(kl, ij) gives the actual displacement for actuators kl, given the command for actuator ij
+    #    i.e. Edm creates a DM surface composed of all the kl "actual" actuator displacements given command h_ij
     #
+    #    We use linear approximation:
+    #    J_xtalk[:, ij, :] = sum_kl( xtalk(kl, ij) (d/dh_kl)sl.propagate_to_dh(Edm(dmh(kl)))
+    #    (d/dh_kl)sl.propagate_to_dh(Edm(dmh(kl))) = sl.pokeprop(kl)
+    #    J_xtalk[:, ij, :] = sum_kl(xtalk(kl, ij) sl.pokeprop(kl))
+    #    J_xtalk[:, ij, :] = sum_kl(xtalk(kl, ij) J[:, kl, :])
+    #    where J[] is Jacobian with no crosstalk
+    #    J_xtalk[:, ij, :] = xtalk(kl, ij).T . J[:, kl, :])
+    #    in sparse matrix form:
+    #    J_xtalk = HC_sparse.T @ J
+    #
+    # Procedure steps in this function:
     # 1. for each DM trim HC_sparse to ijlist: if an actuator is missing
     #    from ijlist, then remove corresponding column and row
     #
@@ -133,7 +139,8 @@ def calcjacs(cfg, ijlist, dm0list=None, jacmethod='normal', num_process=1):
     #                [ zeros         | DM2 HC_sparse ]
     #
     # 3. Matrix multiply:
-    #    jac_xtalk = HC_ijlist @ jac
+    #    jac_xtalk = HC_ijlist.T @ jac
+    #    where jac is the Jacobian for no crosstalk
     #
     # Note: only actuators in the ijlist are included in the crosstalk
     #    matrix. Actuators missing from the ijlist could affect the crosstalk
@@ -157,12 +164,13 @@ def calcjacs(cfg, ijlist, dm0list=None, jacmethod='normal', num_process=1):
         # for each dm, trim HC_sparse, if it exists
         # slice for this dm:
         dmnjk_idm = dmnjk[dmnjk[:, 0] == idm, :]
+
         if DM.dmvobj.crosstalk.HC_sparse is None:
             # no crosstalk, set to identity
             list_HC_sparse.append(
                 sparse.csc_matrix(sparse.eye(dmnjk_idm.shape[0])))
         else:
-            # this eliminates the actuators not in the ijlist:
+            # this eliminates the actuators not in the ijlist
             k_idm = DM.dmvobj.crosstalk.k_diag(dmnjk_idm[:, 1],
                                                dmnjk_idm[:, 2])
             list_HC_sparse.append(
@@ -170,6 +178,7 @@ def calcjacs(cfg, ijlist, dm0list=None, jacmethod='normal', num_process=1):
 
     # create the block diagonal crosstalk matrix from the list for each dm
     HC_ijlist = sparse.block_diag(list_HC_sparse, format='csc')
+    HC_ijlist = HC_ijlist.T
 
     # multiply real, imag parts of jac separately
     jac_xtalk = np.zeros(jac.shape)
@@ -178,7 +187,6 @@ def calcjacs(cfg, ijlist, dm0list=None, jacmethod='normal', num_process=1):
 
     # point jac reference to new array
     jac = jac_xtalk
-
     ### end crosstalk section
 
     return jac
