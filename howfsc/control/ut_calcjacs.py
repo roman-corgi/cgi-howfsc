@@ -6,15 +6,27 @@
 import unittest
 from unittest.mock import patch
 import os
+
 import numpy as np
+from astropy.io import fits
 
 from howfsc.model.mode import CoronagraphMode
 
 from .calcjacs import get_ndhpix, calcjacs_mp, calcjacs_sp, calcjacs, \
                       generate_ijlist, CalcJacsException
 
-cfgpath = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                       '..', 'model', 'testdata', 'widefov', 'widefov.yaml')
+wfov_path = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    '..', 'model', 'testdata', 'widefov')
+
+cfgpath = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    '..', 'model', 'testdata', 'widefov', 'widefov_xtalk_20240709.yaml')
+
+cfgpath_no_xtalk = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    '..', 'model', 'testdata', 'widefov', 'widefov_no_xtalk.yaml')
+
 
 class Testget_ndhpix(unittest.TestCase):
     """Unit test suite for utility get_ndhpix(cfg) """
@@ -114,6 +126,7 @@ class TestCalcJacs(unittest.TestCase):
     def setUp(self):
         """Preload configuration so we don't have to waste time reloading."""
         self.cfg = CoronagraphMode(cfgpath)
+        self.cfg_no_xtalk = CoronagraphMode(cfgpath_no_xtalk)
 
     def test_successful_run(self):
         """Verify no main-body errors in FT logic."""
@@ -141,6 +154,30 @@ class TestCalcJacs(unittest.TestCase):
 
         maxVal = np.max(np.abs(outNormal))
         maxDiff = np.max(np.abs(outFast - outNormal))
+
+        self.assertTrue(maxDiff/maxVal < relTol)
+
+    def test_jac_crosstalk(self):
+        """Verify that DM crosstalk is applied correctly within the Jacobian."""
+        # Choose part of a column of unobscured actuators on DM2 only
+        nact = 48
+        # This actuator is good because it has crosstalk both above and below it.
+        # coef_minus = 0.9255038499832153
+        # coef_plus = 0.07846271246671677
+        i0 = 3755
+        ijlist = [i0-2*nact, i0-nact, i0, i0+nact, i0+2*nact]
+        relTol = 10 * np.finfo(float).eps
+
+        outXtalk = calcjacs(self.cfg, ijlist, jacmethod='fast')
+        outNoXtalk = calcjacs(self.cfg_no_xtalk, ijlist, jacmethod='fast')
+        
+        row0, col0 = np.unravel_index(i0-nact*nact, [nact, nact])
+        coef_minus = fits.getdata(os.path.join(wfov_path, 'coupling_26C_row-1_col0.fits'))[row0, col0]
+        coef_plus = fits.getdata(os.path.join(wfov_path, 'coupling_26C_row1_col0.fits'))[row0, col0]
+        outXtalkManual = coef_minus*outNoXtalk[:, 1, :] + outNoXtalk[:, 2, :] +  coef_plus*outNoXtalk[:, 3, :]
+
+        maxVal = np.max(np.abs(outXtalk[0, 2, :] + 1j*outXtalk[1, 2, :]))
+        maxDiff = np.max(np.abs((outXtalk[0, 2, :] + 1j*outXtalk[1, 2, :]) - (outXtalkManual[0, :] + 1j*outXtalkManual[1, :])))
 
         self.assertTrue(maxDiff/maxVal < relTol)
 
