@@ -195,6 +195,8 @@ def tie_with_matrix(volts, tie):
         else:
             # Grab mean value of all actuators that are tied together
             # upcast to f128 for greater bit width (see PFR 218113)
+            # use longdouble as no float128 on Windows (from CPP); no
+            #  impact on linux
             mean_val = np.mean(dmtied[tie == tienum], dtype=np.longdouble)
             # Assign indices in DM mask to mean value, back as f64
             dmtied[tie == tienum] = mean_val.astype(np.float64)
