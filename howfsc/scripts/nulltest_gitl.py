@@ -184,11 +184,11 @@ def nulling_test_gitl(niter=5, mode='narrowfov', isprof=False, logfile=None, fra
         jacfile = os.path.join(jacpath, 'narrowfov_jac_full.fits')
         cstratfile = os.path.join(modelpath, 'cstrat_narrowfov.yaml')
         probe0file = os.path.join(modelpath,
-                                  'narrowfov_dmrel_1.0e-05_cos.fits')
+                                  'narrowfov_dmrel_1.0e-05_act0.fits')
         probe1file = os.path.join(modelpath,
-                                  'narrowfov_dmrel_1.0e-05_sinlr.fits')
+                                  'narrowfov_dmrel_1.0e-05_act1.fits')
         probe2file = os.path.join(modelpath,
-                                  'narrowfov_dmrel_1.0e-05_sinud.fits')
+                                  'narrowfov_dmrel_1.0e-05_act2.fits')
         hconffile = os.path.join(modelpath, 'hconf_narrowfov.yaml')
         n2clistfiles = [
             os.path.join(modelpath, 'narrowfov_n2c_idx0.fits'),
